@@ -1,1 +1,285 @@
-GCC
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>GCC C-HUB</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+
+    <style>
+        .gcc-logo {
+            /* 270-2709575_greater-chennai-corporation-dr-greater-chennai-corporation-logo 1 */
+            position: absolute;
+            height: 30px;
+            left: 180px;
+            top: 12px;
+            background: #01243F;
+            border: 0;
+        }
+
+        .hub-logo {
+            position: absolute;
+            height: 30px;
+            left: 180px;
+            top: 25px;
+            border: 0;
+        }
+
+        .navbar-language-button,
+        .navbar-vertical-seperater {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .navbar-vertical-seperater {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+        .header-left {
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            color: #ffffff;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .logo-image {
+            height: 45px;
+        }
+
+        .hub-logo-image {
+            height: 30px;
+        }
+
+        .logo-text {
+            padding-left: 1rem;
+        }
+
+        .logo-text>p {
+            margin-bottom: 0;
+            padding-top: .2rem;
+        }
+
+        .btn-cs {
+            background: #01243F !important;
+            color: #ffffff;
+        }
+
+        .secondHeader {
+            position: absolute;
+            width: 1440px;
+            height: 85px;
+            align-self: auto;
+            top: 60px;
+        }
+
+        .second-nav-item {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+
+        .main-banner {
+            position: absolute;
+            width: 2051.01px;
+            height: 845px;
+            left: -36px;
+            top: 85px;
+        }
+
+        .btn-cs-secban {
+            background: #003A65;
+            color: #ffffff;
+            border-radius: 20px;
+        }
+
+        .navbar-custom {
+            height: 85px;
+        }
+    </style>
+    <script>
+        function onClickTamEng(clicked_id) {
+            if (clicked_id == "btnEnglish") {
+                document.getElementById("btnTamil").style.background = "#01243F";
+                document.getElementById("btnEnglish").style.background = '#1F4A6B';
+            }
+            if (clicked_id == "btnTamil") {
+                document.getElementById("btnTamil").style.background = "#1F4A6B";
+                document.getElementById("btnEnglish").style.background = '#01243F';
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" style="background: #01243F; border-radius: 0; border: none; margin: 0;">
+        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
+            <ul class="navbar-header gcc-logo">
+                <a class="logo" href="#">
+                    <img alt="Brand" class="logo-image"
+                        src="asserts/images/greater-chennai-corporation-dr-greater-chennai-corporation-logo.png">
+                    <div class="logo-text">
+                        <p>பெருநகர சென்னை மாநகராட்சி</p>
+                        <p>Greater Chennai Corporation</p>
+                    </div>
+                </a>
+            </ul>
+        </div>
+        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="display: flex; align-items: center; padding-right: 120px;">
+                <li>
+                    <a class="navbar-language-button">
+                        <button type="button" class="btn btn-cs" id="btnSmallFont"
+                            style="font-size: 14px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="navbar-language-button">
+                        <button type="button" class="btn btn-cs" id="btnMediumFont"
+                            style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="navbar-language-button">
+                        <button type="button" class="btn btn-cs" id="btnLargeFont"
+                            style="font-size: 18px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A+</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="navbar-vertical-seperater">
+                        <img src="asserts/images/Vector 4.png">
+                    </a>
+                </li>
+                <li>
+                    <a class="navbar-language-button">
+                        <button type="button" class="btn btn-cs" id="btnEnglish" style="padding: 6px 10px;"
+                            onclick="onClickTamEng(this.id)">English</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="navbar-language-button">
+                        <button type="button" class="btn btn-cs" id="btnTamil" style="padding: 6px 10px;"
+                            onclick="onClickTamEng(this.id)">தமிழ்</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="navbar-vertical-seperater">
+                        <img src="asserts/images/Vector 4.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                        <img src="asserts/images/facebook-icon.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                        <img src="asserts/images/twitter.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                        <img src="asserts/images/instagram.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                        <img src="asserts/images/youtube.png">
+
+                    </a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+
+    <nav class="navbar navbar-custom" style="background: #003A65; border-radius: 0; border: none; margin: 0;">
+        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
+            <ul class="navbar-header hub-logo">
+                <div>
+                    <a class="logo" href="#">
+                        <img alt="Brand" class="hub-logo-image" src="asserts/images/C-Hub.png">
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
+            <ul class="nav navbar-nav navbar-right" style="display: flex; align-items: center; padding-right: 120px;">
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnHome"
+                            onclick="onClickTamEng(this.id)">Home</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
+                            onclick="onClickTamEng(this.id)">About Us</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnCouncil"
+                            onclick="onClickTamEng(this.id)">Council</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
+                            onclick="onClickTamEng(this.id)">Work With Us</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnEvents"
+                            onclick="onClickTamEng(this.id)">Events</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnProjects"
+                            onclick="onClickTamEng(this.id)">Projects</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnFAQ"
+                            onclick="onClickTamEng(this.id)">FAQ</button>
+                    </a>
+                </li>
+                <li>
+                    <a class="second-nav-item">
+                        <button type="button" class="btn btn-cs-secban" id="btnContactUs"
+                            onclick="onClickTamEng(this.id)">Contact Us</button>
+                    </a>
+                </li>
+        </div>
+    </nav>
+
+</body>
+
+</html>
