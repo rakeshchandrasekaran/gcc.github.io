@@ -119,16 +119,70 @@
         .navbar-custom {
             height: 85px;
         }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 110px;
+            font-size: 16px;
+            background-color: #003A65;
+            color: white;
+        }
+
+        @media screen and (max-width: 1000px) {
+            footer {
+            height: 220px;
+        }
+        }
+
+        .footer-column-section {
+            display: flex;
+            justify-content: center;
+            height: 110px;
+            align-items: center;
+        }
+
+        .footer-column-section a {
+            cursor: pointer;
+            color: white;
+        }
+
+        .footer-column-section input {
+            width: 250px;
+            background-color: #01243F;
+            height: 33px;
+            border: none;
+            padding-left: 15px;
+            font-size: 13px;
+        }
+
+        .footer-column-section button {
+            width: 80px;
+            font-size: 14px;
+            color: white;
+            background-color: #afafaf;
+            height: 33px;
+        }
     </style>
     <script>
+        function myScript() {
+                document.getElementById("btnHome").style.color = "#ffffff";
+                document.getElementById("btnHome").style.background = "#032945";
+        }
+
+
         function onClickTamEng(clicked_id) {
             if (clicked_id == "btnEnglish") {
                 document.getElementById("btnTamil").style.background = "#01243F";
                 document.getElementById("btnEnglish").style.background = '#1F4A6B';
+                document.getElementById("btnEnglish").style.color = '#ffffff';
             }
             if (clicked_id == "btnTamil") {
                 document.getElementById("btnTamil").style.background = "#1F4A6B";
                 document.getElementById("btnEnglish").style.background = '#01243F';
+                document.getElementById("btnTamil").style.color = '#ffffff';
             }
         }
     </script>
@@ -227,59 +281,67 @@
                 </div>
             </ul>
         </div>
-        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" style="padding-top: 2.2rem;">
             <ul class="nav navbar-nav navbar-right" style="display: flex; align-items: center; padding-right: 120px;">
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnHome"
-                            onclick="onClickTamEng(this.id)">Home</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnHome"
+                        onclick="onClickTamEng(this.id)" onmouseover="myScript()">Home</button>
                 </li>
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
-                            onclick="onClickTamEng(this.id)">About Us</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
+                        onclick="onClickTamEng(this.id)">About Us</button>
+
                 </li>
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnCouncil"
-                            onclick="onClickTamEng(this.id)">Council</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnCouncil"
+                        onclick="onClickTamEng(this.id)">Council</button>
+
                 </li>
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
-                            onclick="onClickTamEng(this.id)">Work With Us</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
+                        onclick="onClickTamEng(this.id)">Work With Us</button>
+
                 </li>
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnEvents"
-                            onclick="onClickTamEng(this.id)">Events</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnEvents"
+                        onclick="onClickTamEng(this.id)">Events</button>
                 </li>
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnProjects"
-                            onclick="onClickTamEng(this.id)">Projects</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnProjects"
+                        onclick="onClickTamEng(this.id)">Projects</button>
                 </li>
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnFAQ"
-                            onclick="onClickTamEng(this.id)">FAQ</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnFAQ"
+                        onclick="onClickTamEng(this.id)">FAQ</button>
+
                 </li>
                 <li>
-                    <a class="second-nav-item">
-                        <button type="button" class="btn btn-cs-secban" id="btnContactUs"
-                            onclick="onClickTamEng(this.id)">Contact Us</button>
-                    </a>
+                    <button type="button" class="btn btn-cs-secban" id="btnContactUs" 
+                    onclick="onClickTamEng(this.id)">Contact Us</button>
                 </li>
         </div>
     </nav>
-
+    <footer class="page-footer font-small pink pt-4">
+            <div class="row">
+    
+                <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
+                    <div>
+                        <div><span><a href="#">Sitemap</a></span> | <span><a href="#">Disclaimer</a></span> | <span><a href="#">Privacy Policy</a></span> | <span><a href="#">Contact Us</a></span></div>
+                        <div>Copyright © C-HUB
+                            <script type="text/javascript"> document.write(new Date().getFullYear())</script>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
+                    <div>
+                        <div style="padding-bottom: 3px;">Stay Connected</div>
+                        <form><input placeholder="Enter E-mail ID"><button>Submit</button></form>
+                    </div>
+                </div>
+    
+            </div>
+        </footer>
 </body>
 
 </html>
