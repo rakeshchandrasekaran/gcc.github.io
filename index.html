@@ -22,7 +22,6 @@
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
-
     <style>
         .gcc-logo {
             /* 270-2709575_greater-chennai-corporation-dr-greater-chennai-corporation-logo 1 */
@@ -111,13 +110,14 @@
         }
 
         .btn-cs-secban {
-            background: #003A65;
-            color: #ffffff;
+            background: #ffffff;
+            color: #323130;
             border-radius: 20px;
         }
 
         .navbar-custom {
             height: 85px;
+            top: 69px;
         }
 
         footer {
@@ -133,8 +133,8 @@
 
         @media screen and (max-width: 1000px) {
             footer {
-            height: 220px;
-        }
+                height: 220px;
+            }
         }
 
         .footer-column-section {
@@ -165,12 +165,27 @@
             background-color: #afafaf;
             height: 33px;
         }
+
+        .btn-cs-secban:hover {
+            background: rgba(220, 116, 113, 0.12);
+            color: #DC7471;
+        }
+
+        .main-banner-style>img {
+            width: 100%;
+            height: 57rem;
+            padding: 0;
+        }
+
+        .main-banner-style {
+            padding: 0;
+        }
     </style>
     <script>
-        function myScript() {
-                document.getElementById("btnHome").style.color = "#ffffff";
-                document.getElementById("btnHome").style.background = "#032945";
-        }
+        // function myScript() {
+        //         document.getElementById("btnHome").style.color = "#ffffff";
+        //         document.getElementById("btnHome").style.background = "#032945";
+        // }
 
 
         function onClickTamEng(clicked_id) {
@@ -188,160 +203,180 @@
     </script>
 </head>
 
-<body>
-
-    <nav class="navbar navbar-default" style="background: #01243F; border-radius: 0; border: none; margin: 0;">
-        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
-            <ul class="navbar-header gcc-logo">
-                <a class="logo" href="#">
-                    <img alt="Brand" class="logo-image"
-                        src="asserts/images/greater-chennai-corporation-dr-greater-chennai-corporation-logo.png">
-                    <div class="logo-text">
-                        <p>பெருநகர சென்னை மாநகராட்சி</p>
-                        <p>Greater Chennai Corporation</p>
-                    </div>
-                </a>
-            </ul>
-        </div>
-        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right" style="display: flex; align-items: center; padding-right: 120px;">
-                <li>
-                    <a class="navbar-language-button">
-                        <button type="button" class="btn btn-cs" id="btnSmallFont"
-                            style="font-size: 14px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="navbar-language-button">
-                        <button type="button" class="btn btn-cs" id="btnMediumFont"
-                            style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="navbar-language-button">
-                        <button type="button" class="btn btn-cs" id="btnLargeFont"
-                            style="font-size: 18px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A+</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="navbar-vertical-seperater">
-                        <img src="asserts/images/Vector 4.png">
-                    </a>
-                </li>
-                <li>
-                    <a class="navbar-language-button">
-                        <button type="button" class="btn btn-cs" id="btnEnglish" style="padding: 6px 10px;"
-                            onclick="onClickTamEng(this.id)">English</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="navbar-language-button">
-                        <button type="button" class="btn btn-cs" id="btnTamil" style="padding: 6px 10px;"
-                            onclick="onClickTamEng(this.id)">தமிழ்</button>
-                    </a>
-                </li>
-                <li>
-                    <a class="navbar-vertical-seperater">
-                        <img src="asserts/images/Vector 4.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
-                        <img src="asserts/images/facebook-icon.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
-                        <img src="asserts/images/twitter.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
-                        <img src="asserts/images/instagram.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" style="padding-left: 5px; padding-right: 5px;">
-                        <img src="asserts/images/youtube.png">
-
-                    </a>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </nav>
-
-
-    <nav class="navbar navbar-custom" style="background: #003A65; border-radius: 0; border: none; margin: 0;">
-        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
-            <ul class="navbar-header hub-logo">
-                <div>
+<body style="height: 2389px;">
+    <div class="wrapper" style="position: relative;">
+        <nav class="navbar navbar-default navbar-fixed-top"
+            style="background: #01243F; border-radius: 0; border: none; margin: 0;">
+            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
+                <ul class="navbar-header gcc-logo">
                     <a class="logo" href="#">
-                        <img alt="Brand" class="hub-logo-image" src="asserts/images/C-Hub.png">
-                    </a>
-                </div>
-            </ul>
-        </div>
-        <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" style="padding-top: 2.2rem;">
-            <ul class="nav navbar-nav navbar-right" style="display: flex; align-items: center; padding-right: 120px;">
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnHome"
-                        onclick="onClickTamEng(this.id)" onmouseover="myScript()">Home</button>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
-                        onclick="onClickTamEng(this.id)">About Us</button>
-
-                </li>
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnCouncil"
-                        onclick="onClickTamEng(this.id)">Council</button>
-
-                </li>
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
-                        onclick="onClickTamEng(this.id)">Work With Us</button>
-
-                </li>
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnEvents"
-                        onclick="onClickTamEng(this.id)">Events</button>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnProjects"
-                        onclick="onClickTamEng(this.id)">Projects</button>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnFAQ"
-                        onclick="onClickTamEng(this.id)">FAQ</button>
-
-                </li>
-                <li>
-                    <button type="button" class="btn btn-cs-secban" id="btnContactUs" 
-                    onclick="onClickTamEng(this.id)">Contact Us</button>
-                </li>
-        </div>
-    </nav>
-    <footer class="page-footer font-small pink pt-4">
-            <div class="row">
-    
-                <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
-                    <div>
-                        <div><span><a href="#">Sitemap</a></span> | <span><a href="#">Disclaimer</a></span> | <span><a href="#">Privacy Policy</a></span> | <span><a href="#">Contact Us</a></span></div>
-                        <div>Copyright © C-HUB
-                            <script type="text/javascript"> document.write(new Date().getFullYear())</script>
+                        <img alt="Brand" class="logo-image"
+                            src="asserts/images/greater-chennai-corporation-dr-greater-chennai-corporation-logo.png">
+                        <div class="logo-text">
+                            <p>பெருநகர சென்னை மாநகராட்சி</p>
+                            <p>Greater Chennai Corporation</p>
                         </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
-                    <div>
-                        <div style="padding-bottom: 3px;">Stay Connected</div>
-                        <form><input placeholder="Enter E-mail ID"><button>Submit</button></form>
-                    </div>
-                </div>
-    
+                    </a>
+                </ul>
             </div>
-        </footer>
+            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right"
+                    style="display: flex; align-items: center; padding-right: 120px;">
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnSmallFont"
+                                style="font-size: 14px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnMediumFont"
+                                style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnLargeFont"
+                                style="font-size: 18px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A+</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-vertical-seperater">
+                            <img src="asserts/images/Vector 4.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnEnglish" style="padding: 6px 10px;"
+                                onclick="onClickTamEng(this.id)">English</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnTamil" style="padding: 6px 10px;"
+                                onclick="onClickTamEng(this.id)">தமிழ்</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-vertical-seperater">
+                            <img src="asserts/images/Vector 4.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/facebook-icon.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/twitter.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/instagram.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/youtube.png">
+
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <nav class="navbar navbar-custom navbar-fixed-top"
+            style="background: #ffffff; border-radius: 0; border: none; margin: 0;">
+            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
+                <ul class="navbar-header hub-logo">
+                    <div>
+                        <a class="logo" href="#">
+                            <img alt="Brand" class="hub-logo-image" src="asserts/images/C-Hub-orange.png">
+                        </a>
+                    </div>
+                </ul>
+            </div>
+            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" style="padding-top: 2.2rem;">
+                <ul class="nav navbar-nav navbar-right"
+                    style="display: flex; align-items: center; padding-right: 120px;">
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnHome"
+                            onclick="onClickTamEng(this.id)">Home</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
+                            onclick="onClickTamEng(this.id)">About Us</button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnCouncil"
+                            onclick="onClickTamEng(this.id)">Council</button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
+                            onclick="onClickTamEng(this.id)">Work With Us</button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnEvents"
+                            onclick="onClickTamEng(this.id)">Events</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnProjects"
+                            onclick="onClickTamEng(this.id)">Projects</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnFAQ"
+                            onclick="onClickTamEng(this.id)">FAQ</button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-cs-secban" id="btnContactUs"
+                            onclick="onClickTamEng(this.id)">Contact Us</button>
+                    </li>
+            </div>
+        </nav>
+        <div class="col-lg-12 col-md-12 col-sm-12 main-banner-style">
+            <img src="asserts/images/main_banner.jpg">
+        </div>
+        <h1>here we go</h1>
+    </div>
+    <div>
+
+    </div>
+    <h1>here we go</h1>
+    <h1>here we go</h1>
+    <h1>here we go</h1>
+    <h1>here we go</h1>
+    <h1>here we go</h1>
+    <h1>here we go</h1>
+    <h1>here we go</h1>
+    <h1>here we go</h1>
+
+
+    <footer class="page-footer font-small pink pt-4">
+        <div class="row">
+
+            <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
+                <div>
+                    <div><span><a href="#">Sitemap</a></span> | <span><a href="#">Disclaimer</a></span> | <span><a
+                                href="#">Privacy Policy</a></span> | <span><a href="#">Contact Us</a></span></div>
+                    <div>Copyright © C-HUB
+                        <script type="text/javascript"> document.write(new Date().getFullYear())</script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
+                <div>
+                    <div style="padding-bottom: 3px;">Stay Connected</div>
+                    <form><input placeholder="Enter E-mail ID"><button>Submit</button></form>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
