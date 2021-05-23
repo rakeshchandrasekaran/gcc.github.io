@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>GCC C-HUB</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Carousal Ref -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <!-- or the reference on CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+
+    <style>
+        .hub-logo {
+            height: 30px;
+            border: 0;
+        }
+
+        .header-column-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-language-button,
+        .navbar-vertical-seperater {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .navbar-vertical-seperater {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+        .header-left {
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            padding: 12px 0;
+            color: #ffffff;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .logo-image {
+            height: 45px;
+        }
+
+        .logo-container {
+            padding: 0;
+            margin: 0;
+            width: 252px;
+            padding: 27.5px 0;
+        }
+
+        .hub-logo-image {
+            height: 30px;
+        }
+
+        .logo-text {
+            padding-left: 1rem;
+        }
+
+        .logo-text>p {
+            margin-bottom: 0;
+            padding-top: .2rem;
+        }
+
+        .btn-cs {
+            background: #01243F !important;
+            color: #fcfcfc;
+        }
+
+        .secondHeader {
+            position: absolute;
+            width: 1440px;
+            height: 85px;
+            align-self: auto;
+            top: 60px;
+        }
+
+        .second-nav-item {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+
+        .main-banner {
+            position: absolute;
+            width: 2051.01px;
+            height: 845px;
+            left: -36px;
+            top: 85px;
+        }
+
+        .btn-cs-secban {
+            background: #fcfcfc;
+            color: #323130;
+            border-radius: 20px;
+        }
+
+        .navbar-custom {
+            height: 85px;
+            top: 69px;
+        }
+
+        footer {
+            width: 100%;
+            height: auto;
+            background-color: #003A65;
+            color: white;
+        }
+
+        .footer-column-section {
+            display: flex;
+            justify-content: center;
+            height: 110px;
+            align-items: center;
+        }
+
+        .footer-column-section a {
+            cursor: pointer;
+            color: white;
+        }
+
+        .footer-column-section input {
+            width: 250px;
+            background-color: #01243F;
+            height: 33px;
+            border: none;
+            padding-left: 15px;
+            font-size: 13px;
+        }
+
+        .footer-column-section button {
+            width: 80px;
+            font-size: 14px;
+            color: white;
+            background-color: #afafaf;
+            height: 33px;
+        }
+
+        .btn-cs-secban:hover {
+            background: rgba(220, 116, 113, 0.12);
+            color: #DC7471;
+        }
+
+        .main-banner-style>img {
+            width: 100%;
+            height: 71rem;
+            padding: 0;
+        }
+
+        .main-banner-style {
+            padding: 0;
+        }
+
+        .secondary-navbar {
+            margin-top: 75px !important;
+        }
+
+        .navbar-navigation-button {
+            padding: 25px 0 !important;
+        }
+
+        .nav>li>a:focus,
+        .nav>li>a:hover {
+            background-color: unset;
+        }
+
+        .secondary-navbar .navbar-brand {
+            padding: 25px 15px;
+            height: 85px;
+        }
+
+        .primary-navbar .navbar-brand {
+            padding: 15px 15px;
+            height: 75px;
+            color: white;
+        }
+
+        .navbar-collapse {
+            border: none;
+        }
+
+        .navbar-toggle {
+            /* (80px - button height 34px) / 2 = 23px */
+            margin-top: 23px;
+            padding: 9px 10px !important;
+        }
+
+        .navbar-fixed-top .navbar-collapse {
+            max-height: unset !important;
+        }
+
+        @media (max-width: 768px) {
+            .secondary-navbar>.navbar-header {
+                border-bottom: solid 1px #e1e1e1;
+            }
+
+            .primary-navbar .navbar-header {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .secondary-navbar .navbar-nav>li>a {
+                padding-top: 29px;
+                padding-bottom: 29px;
+                line-height: 27px;
+            }
+
+            .btn {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+
+            .navbar-responsive-container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .navbar-responsive-container {
+                width: 970px;
+            }
+
+            .primary-navbar .navbar-nav>li>a {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .logo-container {
+                width: 100%;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            footer {
+                font-size: 13px;
+            }
+
+            .footer-column-section {
+                height: 80px;
+            }
+
+            .footer-column-section div {
+                width: 330px;
+            }
+
+            .primary-navbar .navbar-header {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navbar-navigation-button {
+                padding: 0 !important;
+            }
+
+            .btn-cs-secban {
+                width: 100%;
+                padding: 14px;
+                border-radius: 0;
+            }
+
+            /* collapse the navbar from medium screen */
+            .navbar-fixed-top {
+                border-width: 0 0 1px;
+            }
+
+            .navbar-header {
+                float: none;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .navbar-collapse {
+                border-top: 1px solid transparent;
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-collapse.collapse {
+                display: none !important;
+            }
+
+            .navbar-nav {
+                float: none !important;
+                margin: 7.5px -15px;
+            }
+
+            .navbar-nav>li {
+                float: none;
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .navbar-text {
+                float: none;
+                margin: 15px 0;
+            }
+
+            /* since 3.1.0 */
+            .navbar-collapse.collapse.in {
+                display: block !important;
+            }
+
+            .collapsing {
+                overflow: hidden !important;
+            }
+        }
+
+        @media (max-width: 472px) {
+            .primary-navbar .navbar-header {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .navbar-responsive-container {
+                width: 1170px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .navbar-responsive-container {
+                width: 1470px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (min-width: 2100px) {
+            .navbar-responsive-container {
+                width: 1970px;
+            }
+        }
+
+
+        .btn-cs-secban:hover {
+            background: rgba(220, 116, 113, 0.12);
+            color: #DC7471;
+        }
+
+        .main-banner-style>img {
+            width: 100%;
+            height: 71rem;
+            padding: 0;
+        }
+
+        .main-banner-style {
+            padding: 0;
+        }
+
+        .backgroud-banners,
+        .backgroud-banners2,
+        .backgroud-banners3 {
+            position: relative;
+            /* opacity: 0.65; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .backgroud-banners {
+            background-image: url("./asserts/images/main_banner.jpg");
+            min-height: 100%;
+        }
+
+        .backgroud-banners2 {
+            background-image: url("./asserts/images/main_banner_2.jpg");
+            min-height: 100%
+        }
+
+        .backgroud-banners3 {
+            background-image: url("./asserts/images/main_banner_3.jpg");
+            min-height: 100%;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 28%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption>img {
+            width: 20%;
+            height: 20%;
+        }
+
+        .main-caption-btnworkwithus {
+            position: absolute;
+            left: 0;
+            top: 46%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .main-caption-btnworkwithus>button {
+            width: 10%;
+            height: 25%;
+            background: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.15);
+            border-radius: 45px;
+            color: #DC7471;
+        }
+
+        .btnworkwithus-cs:hover {
+            /* background: rgba(220, 116, 113, 0.12); */
+            color: #DC7471;
+        }
+
+        .main-caption2-heading {
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 100%;
+            text-align: center;
+            color: #004578;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-sub-heading {
+            position: absolute;
+            left: 18%;
+            top: 18%;
+            width: 65%;
+            text-align: center;
+            /* color: #004578;  */
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-sub-heading-2 {
+            position: absolute;
+            left: 18%;
+            top: 27%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-content-1 {
+            position: absolute;
+            left: 18%;
+            top: 40%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-content-1-rectangle-1 {
+            position: absolute;
+            left: 24%;
+            top: 60%;
+            width: 208px;
+            height: 208px;
+            /* background: #FCF3F2; */
+            border-radius: 5px;
+        }
+
+        .main-caption3-content-1-rectangle-2 {
+            position: absolute;
+            left: 52%;
+            top: 60%;
+            width: 208px;
+            height: 208px;
+            /* background: #FCF3F2; */
+            border-radius: 5px;
+            /* background-image: url("./asserts/images/schoolsanduniversity.png") */
+        }
+
+        main-caption3-content-1-rectangle-2-img {
+            width: 208px;
+            height: 208px;
+        }
+
+        .main-caption3-content-2 {
+            position: absolute;
+            left: 39%;
+            top: 80%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .btnBeaChangeMaker-css {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 22px 69px;
+            position: absolute;
+            width: 341px;
+            height: 66px;
+            color: #FFFFFF;
+            background: #005A9E;
+            border-radius: 3px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        .carousal {
+            margin: auto;
+            width: 65%;
+            text-align: center;
+        }
+
+        .carousal-img-css {
+            width: 348px;
+            height: 396px;
+        }
+    </style>
+    <script>
+        
+        function bodyOnload() {
+            document.getElementById("btnAboutUs").style.color = "#DF7870";
+                document.getElementById("btnAboutUs").style.background = "rgba(220, 116, 113, 0.12)";
+            }
+        function onClickTamEng(clicked_id) {
+            if (clicked_id == "btnEnglish") {
+                document.getElementById("btnTamil").style.background = "#01243F";
+                document.getElementById("btnEnglish").style.background = '#1F4A6B';
+                document.getElementById("btnEnglish").style.color = '#ffffff';
+            }
+            if (clicked_id == "btnTamil") {
+                document.getElementById("btnTamil").style.background = "#1F4A6B";
+                document.getElementById("btnEnglish").style.background = '#01243F';
+                document.getElementById("btnTamil").style.color = '#ffffff';
+            }
+        }
+    </script>
+</head>
+
+<body onload="bodyOnload()">
+    <nav class="navbar navbar-default navbar-fixed-top primary-navbar"
+        style="background: #01243F; margin: 0; border: 0; z-index: 999999;">
+        <div class="container-fluid navbar-responsive-container">
+            <div class="navbar-header">
+                <a class="navbar-brand logo" href="#">
+                    <img alt="Brand" class="logo-image"
+                        src="asserts/images/greater-chennai-corporation-dr-greater-chennai-corporation-logo.png">
+                    <div class="logo-text">
+                        <p>பெருநகர சென்னை மாநகராட்சி</p>
+                        <p>Greater Chennai Corporation</p>
+                    </div>
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNavbar"
+                    style="position: absolute; right: 20px; border: none; margin: 18px 0; padding: 10px;">
+                    <img alt="dropdown" class="primary-navbar-dropdown" src="asserts/images/down-arrow.png"
+                        style="height: 15px;">
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="primaryNavbar" style="border: none;">
+                <ul class="nav navbar-nav navbar-right"
+                    style="display: flex; align-items: center; justify-content: center;">
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnSmallFont"
+                                style="font-size: 14px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnMediumFont"
+                                style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)" >A</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnLargeFont"
+                                style="font-size: 18px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A+</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-vertical-seperater">
+                            <img src="asserts/images/Vector 4.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnEnglish" style="padding: 6px 10px;"
+                                onclick="onClickTamEng(this.id)">English</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-language-button">
+                            <button type="button" class="btn btn-cs" id="btnTamil" style="padding: 6px 10px;"
+                                onclick="onClickTamEng(this.id)">தமிழ்</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-vertical-seperater">
+                            <img src="asserts/images/Vector 4.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/facebook-icon.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/twitter.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/instagram.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-left: 5px; padding-right: 5px;">
+                            <img src="asserts/images/youtube.png">
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar navbar-default navbar-fixed-top secondary-navbar">
+        <div class=" container-fluid navbar-responsive-container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img alt="Brand" class="hub-logo-image" src="asserts/images/C-Hub-orange.png">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#secondaryNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="secondaryNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="navbar-navigation-button" href="./index.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnHome"
+                                onclick="onClickTamEng(this.id)">Home</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./about_us.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
+                                onclick="onClickTamEng(this.id)">About Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnCouncil"
+                                onclick="onClickTamEng(this.id)">Council</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
+                                onclick="onClickTamEng(this.id)">Work With Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnEvents"
+                                onclick="onClickTamEng(this.id)">Events</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnProjects"
+                                onclick="onClickTamEng(this.id)">Projects</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnFAQ"
+                                onclick="onClickTamEng(this.id)">FAQ</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnContactUs"
+                                onclick="onClickTamEng(this.id)">Contact Us</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="page-footer font-small pink pt-4">
+        <div class="row" style="margin: 0">
+            <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
+                <div>
+                    <div><span><a href="#">Sitemap</a></span> | <span><a href="#">Disclaimer</a></span> | <span><a
+                                href="#">Privacy Policy</a></span> | <span><a href="#">Contact Us</a></span></div>
+                    <div>Copyright © C-HUB
+                        <script type="text/javascript"> document.write(new Date().getFullYear())</script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
+                <div>
+                    <div style="padding-bottom: 3px;">Stay Connected</div>
+                    <form><input placeholder="Enter E-mail ID"><button>Submit</button></form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

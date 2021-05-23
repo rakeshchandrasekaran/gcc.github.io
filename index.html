@@ -8,37 +8,51 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>GCC C-HUB</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"> -->
 
     <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Carousal Ref -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <!-- or the reference on CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+
     <style>
-        .gcc-logo {
-            /* 270-2709575_greater-chennai-corporation-dr-greater-chennai-corporation-logo 1 */
-            position: absolute;
+        .hub-logo {
             height: 30px;
-            left: 180px;
-            top: 12px;
-            background: #01243F;
             border: 0;
         }
 
-        .hub-logo {
-            position: absolute;
-            height: 30px;
-            left: 180px;
-            top: 25px;
-            border: 0;
+        .header-column-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .navbar-language-button,
@@ -59,6 +73,7 @@
         }
 
         .logo {
+            padding: 12px 0;
             color: #ffffff;
             display: flex;
             flex-direction: row;
@@ -66,6 +81,13 @@
 
         .logo-image {
             height: 45px;
+        }
+
+        .logo-container {
+            padding: 0;
+            margin: 0;
+            width: 252px;
+            padding: 27.5px 0;
         }
 
         .hub-logo-image {
@@ -83,7 +105,7 @@
 
         .btn-cs {
             background: #01243F !important;
-            color: #ffffff;
+            color: #fcfcfc;
         }
 
         .secondHeader {
@@ -110,7 +132,7 @@
         }
 
         .btn-cs-secban {
-            background: #ffffff;
+            background: #fcfcfc;
             color: #323130;
             border-radius: 20px;
         }
@@ -121,26 +143,16 @@
         }
 
         footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
             width: 100%;
-            height: 82px;
-            font-size: 16px;
+            height: auto;
             background-color: #003A65;
             color: white;
-        }
-
-        @media screen and (max-width: 1000px) {
-            footer {
-                height: 110px;
-            }
         }
 
         .footer-column-section {
             display: flex;
             justify-content: center;
-            height: 82px;
+            height: 110px;
             align-items: center;
         }
 
@@ -173,15 +185,415 @@
 
         .main-banner-style>img {
             width: 100%;
-            height: 60rem;
+            height: 71rem;
             padding: 0;
         }
 
         .main-banner-style {
             padding: 0;
         }
+
+        .secondary-navbar {
+            margin-top: 75px !important;
+        }
+
+        .navbar-navigation-button {
+            padding: 25px 0 !important;
+        }
+
+        .nav>li>a:focus,
+        .nav>li>a:hover {
+            background-color: unset;
+        }
+
+        .secondary-navbar .navbar-brand {
+            padding: 25px 15px;
+            height: 85px;
+        }
+
+        .primary-navbar .navbar-brand {
+            padding: 15px 15px;
+            height: 75px;
+            color: white;
+        }
+
+        .navbar-collapse {
+            border: none;
+        }
+
+        .navbar-toggle {
+            /* (80px - button height 34px) / 2 = 23px */
+            margin-top: 23px;
+            padding: 9px 10px !important;
+        }
+
+        .navbar-fixed-top .navbar-collapse {
+            max-height: unset !important;
+        }
+
+        @media (max-width: 768px) {
+            .secondary-navbar>.navbar-header {
+                border-bottom: solid 1px #e1e1e1;
+            }
+
+            .primary-navbar .navbar-header {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .secondary-navbar .navbar-nav>li>a {
+                padding-top: 29px;
+                padding-bottom: 29px;
+                line-height: 27px;
+            }
+
+            .btn {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+
+            .navbar-responsive-container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .navbar-responsive-container {
+                width: 970px;
+            }
+
+            .primary-navbar .navbar-nav>li>a {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .logo-container {
+                width: 100%;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            footer {
+                font-size: 13px;
+            }
+
+            .footer-column-section {
+                height: 80px;
+            }
+
+            .footer-column-section div {
+                width: 330px;
+            }
+
+            .primary-navbar .navbar-header {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navbar-navigation-button {
+                padding: 0 !important;
+            }
+
+            .btn-cs-secban {
+                width: 100%;
+                padding: 14px;
+                border-radius: 0;
+            }
+
+            /* collapse the navbar from medium screen */
+            .navbar-fixed-top {
+                border-width: 0 0 1px;
+            }
+
+            .navbar-header {
+                float: none;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .navbar-collapse {
+                border-top: 1px solid transparent;
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-collapse.collapse {
+                display: none !important;
+            }
+
+            .navbar-nav {
+                float: none !important;
+                margin: 7.5px -15px;
+            }
+
+            .navbar-nav>li {
+                float: none;
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .navbar-text {
+                float: none;
+                margin: 15px 0;
+            }
+
+            /* since 3.1.0 */
+            .navbar-collapse.collapse.in {
+                display: block !important;
+            }
+
+            .collapsing {
+                overflow: hidden !important;
+            }
+        }
+
+        @media (max-width: 472px) {
+            .primary-navbar .navbar-header {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .navbar-responsive-container {
+                width: 1170px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .navbar-responsive-container {
+                width: 1470px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (min-width: 2100px) {
+            .navbar-responsive-container {
+                width: 1970px;
+            }
+        }
+
+
+        .btn-cs-secban:hover {
+            background: rgba(220, 116, 113, 0.12);
+            color: #DC7471;
+        }
+
+        .main-banner-style>img {
+            width: 100%;
+            height: 71rem;
+            padding: 0;
+        }
+
+        .main-banner-style {
+            padding: 0;
+        }
+
+        .backgroud-banners,
+        .backgroud-banners2,
+        .backgroud-banners3 {
+            position: relative;
+            /* opacity: 0.65; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .backgroud-banners {
+            background-image: url("./asserts/images/main_banner.jpg");
+            min-height: 100%;
+        }
+
+        .backgroud-banners2 {
+            background-image: url("./asserts/images/main_banner_2.jpg");
+            min-height: 100%
+        }
+
+        .backgroud-banners3 {
+            background-image: url("./asserts/images/main_banner_3.jpg");
+            min-height: 100%;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 28%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption>img {
+            width: 20%;
+            height: 20%;
+        }
+
+        .main-caption-btnworkwithus {
+            position: absolute;
+            left: 0;
+            top: 46%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .main-caption-btnworkwithus>button {
+            width: 10%;
+            height: 25%;
+            background: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.15);
+            border-radius: 45px;
+            color: #DC7471;
+        }
+
+        .btnworkwithus-cs:hover {
+            /* background: rgba(220, 116, 113, 0.12); */
+            color: #DC7471;
+        }
+
+        .main-caption2-heading {
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 100%;
+            text-align: center;
+            color: #004578;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-sub-heading {
+            position: absolute;
+            left: 18%;
+            top: 18%;
+            width: 65%;
+            text-align: center;
+            /* color: #004578;  */
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-sub-heading-2 {
+            position: absolute;
+            left: 18%;
+            top: 27%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-content-1 {
+            position: absolute;
+            left: 18%;
+            top: 40%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-content-1-rectangle-1 {
+            position: absolute;
+            left: 24%;
+            top: 60%;
+            width: 208px;
+            height: 208px;
+            /* background: #FCF3F2; */
+            border-radius: 5px;
+        }
+
+        .main-caption3-content-1-rectangle-2 {
+            position: absolute;
+            left: 52%;
+            top: 60%;
+            width: 208px;
+            height: 208px;
+            /* background: #FCF3F2; */
+            border-radius: 5px;
+            /* background-image: url("./asserts/images/schoolsanduniversity.png") */
+        }
+
+        main-caption3-content-1-rectangle-2-img {
+            width: 208px;
+            height: 208px;
+        }
+
+        .main-caption3-content-2 {
+            position: absolute;
+            left: 39%;
+            top: 80%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .btnBeaChangeMaker-css {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 22px 69px;
+            position: absolute;
+            width: 341px;
+            height: 66px;
+            color: #FFFFFF;
+            background: #005A9E;
+            border-radius: 3px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        .carousal {
+            margin: auto;
+            width: 65%;
+            text-align: center;
+        }
+
+        .carousal-img-css {
+            width: 348px;
+            height: 396px;
+        }
     </style>
     <script>
+        function bodyOnload() {
+            document.getElementById("btnHome").style.color = "#DF7870";
+                document.getElementById("btnHome").style.background = "rgba(220, 116, 113, 0.12)";
+            }
         function onClickTamEng(clicked_id) {
             if (clicked_id == "btnEnglish") {
                 document.getElementById("btnTamil").style.background = "#01243F";
@@ -197,25 +609,30 @@
     </script>
 </head>
 
-<body>
-    <div class="wrapper" style="position: relative;">
-        <nav class="navbar navbar-default navbar-fixed-top"
-            style="background: #01243F; border-radius: 0; border: none; margin: 0;">
-            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                <ul class="navbar-header gcc-logo">
-                    <a class="logo col-xs-12" href="#">
-                        <img alt="Brand" class="logo-image"
-                            src="asserts/images/greater-chennai-corporation-dr-greater-chennai-corporation-logo.png">
-                        <div class="logo-text col-xs-12">
-                            <p>பெருநகர சென்னை மாநகராட்சி</p>
-                            <p>Greater Chennai Corporation</p>
-                        </div>
-                    </a>
-                </ul>
+<body onload="bodyOnload()">
+
+    <nav class="navbar navbar-default navbar-fixed-top primary-navbar"
+        style="background: #01243F; margin: 0; border: 0; z-index: 999999;">
+        <div class="container-fluid navbar-responsive-container">
+            <div class="navbar-header">
+                <a class="navbar-brand logo" href="#">
+                    <img alt="Brand" class="logo-image"
+                        src="asserts/images/greater-chennai-corporation-dr-greater-chennai-corporation-logo.png">
+                    <div class="logo-text">
+                        <p>பெருநகர சென்னை மாநகராட்சி</p>
+                        <p>Greater Chennai Corporation</p>
+                    </div>
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNavbar"
+                    style="position: absolute; right: 20px; border: none; margin: 18px 0; padding: 10px;">
+                    <img alt="dropdown" class="primary-navbar-dropdown" src="asserts/images/down-arrow.png"
+                        style="height: 15px;">
+                </button>
             </div>
-            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" id="bs-example-navbar-collapse-1">
+
+            <div class="collapse navbar-collapse" id="primaryNavbar" style="border: none;">
                 <ul class="nav navbar-nav navbar-right"
-                    style="display: flex; align-items: center; padding-right: 120px;">
+                    style="display: flex; align-items: center; justify-content: center;">
                     <li>
                         <a class="navbar-language-button">
                             <button type="button" class="btn btn-cs" id="btnSmallFont"
@@ -225,7 +642,7 @@
                     <li>
                         <a class="navbar-language-button">
                             <button type="button" class="btn btn-cs" id="btnMediumFont"
-                                style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
+                                style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)" >A</button>
                         </a>
                     </li>
                     <li>
@@ -278,76 +695,136 @@
                         </a>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
+            </div>
+        </div>
+    </nav>
 
-        <nav class="navbar navbar-custom navbar-fixed-top"
-            style="background: #ffffff; border-radius: 0; border: none; margin: 0;">
-            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6">
-                <ul class="navbar-header hub-logo">
-                    <div>
-                        <a class="logo" href="#">
-                            <img alt="Brand" class="hub-logo-image" src="asserts/images/C-Hub-orange.png">
+    <div class="navbar navbar-default navbar-fixed-top secondary-navbar">
+        <div class=" container-fluid navbar-responsive-container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img alt="Brand" class="hub-logo-image" src="asserts/images/C-Hub-orange.png">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#secondaryNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="secondaryNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="navbar-navigation-button" href="./index.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnHome"
+                                onclick="onClickTamEng(this.id)">Home</button>
                         </a>
-                    </div>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./about_us.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
+                                onclick="onClickTamEng(this.id)">About Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnCouncil"
+                                onclick="onClickTamEng(this.id)">Council</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
+                                onclick="onClickTamEng(this.id)">Work With Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnEvents"
+                                onclick="onClickTamEng(this.id)">Events</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnProjects"
+                                onclick="onClickTamEng(this.id)">Projects</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnFAQ"
+                                onclick="onClickTamEng(this.id)">FAQ</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button">
+                            <button type="button" class="btn btn-cs-secban" id="btnContactUs"
+                                onclick="onClickTamEng(this.id)">Contact Us</button>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="container-fluid col-xs-12 col-md-6 col-lg-6 col-xl-6" style="padding-top: 2.2rem;">
-                <ul class="nav navbar-nav navbar-right"
-                    style="display: flex; align-items: center; padding-right: 120px;">
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnHome"
-                            onclick="onClickTamEng(this.id)">Home</button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
-                            onclick="onClickTamEng(this.id)">About Us</button>
-
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnCouncil"
-                            onclick="onClickTamEng(this.id)">Council</button>
-
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
-                            onclick="onClickTamEng(this.id)">Work With Us</button>
-
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnEvents"
-                            onclick="onClickTamEng(this.id)">Events</button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnProjects"
-                            onclick="onClickTamEng(this.id)">Projects</button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnFAQ"
-                            onclick="onClickTamEng(this.id)">FAQ</button>
-
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-cs-secban" id="btnContactUs"
-                            onclick="onClickTamEng(this.id)">Contact Us</button>
-                    </li>
+        </div>
+    </div>
+    <div class="backgroud-banners">
+        <div class="caption">
+            <img src="./asserts/images/Chennai Hub.png" />
+        </div>
+        <div class="main-caption-btnworkwithus">
+            <button type="button" class="btn btnworkwithus-cs" id="btnworkwithus">Work With Us</button>
+        </div>
+    </div>
+    <div class="backgroud-banners2">
+        <div class="main-caption2-heading">
+            <h1 style="font-size: 55px">Current Events</h1>
+            <div class="carousal">
+                <div class="splide" id="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image1.png" class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image2.png"  class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image3.png"  class="carousal-img-css">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <div class="col-lg-12 col-md-12 col-sm-12 main-banner-style">
-            <img src="asserts/images/main_banner.jpg">
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 main-banner-style">
-            <img src="asserts/images/main_banner_2.jpg">
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 main-banner-style">
-            <img src="asserts/images/main_banner_3.jpg">
-        </div>
-    </div>
-    <div>
 
     </div>
+    <div class="backgroud-banners3">
+        <div class="main-caption2-heading">
+            <h1 style="font-size: 45px">Changemaker’s Program</h1>
+        </div>
+        <div class="main-caption3-sub-heading">
+            <h5 style="font-size: 16px">Change begins at home and we want to be able to bring about grassroot level
+                changes through our program. The Changemaker’s program
+                exclusively focuses on creating academic engagements for C-Hub in the city.</h5>
+
+        </div>
+        <div class="main-caption3-sub-heading-2">
+            <h3 style="font-size: 26px">Who can join the Changemaker’s Program ?</h2>
+        </div>
+        <div class="main-caption3-content-1">
+            <div class="main-caption3-content-1-rectangle-1 col-xs-12 col-sm-12">
+                <img style="width:208px; height:208px" src="./asserts/images/students.png">
+            </div>
+            <div class="main-caption3-content-1-rectangle-2 col-xs-12 col-sm-12">
+                <img style="width:208px; height:208px" src="./asserts/images/schoolsanduniversity.png">
+            </div>
+        </div>
+        <div class="main-caption3-content-2">
+            <button id="btnBeaChangeMaker" class="btn btnBeaChangeMaker-css">Be a Change Maker</button>
+        </div>
+    </div>
+
     <footer class="page-footer font-small pink pt-4">
-        <div class="row">
+        <div class="row" style="margin: 0">
             <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
                 <div>
                     <div><span><a href="#">Sitemap</a></span> | <span><a href="#">Disclaimer</a></span> | <span><a
@@ -365,6 +842,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#splide', {
+                perPage: 3,
+                perMove: 1,
+                rewind: true,
+            }).mount();
+        });
+    </script>
 </body>
 
 </html>
