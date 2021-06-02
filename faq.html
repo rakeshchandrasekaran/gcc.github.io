@@ -231,6 +231,160 @@
             max-height: unset !important;
         }
 
+
+        /* Faq Section *********************************** */
+
+        .expandable-tile{
+            width: 524px;
+            margin: 16px 17px 0 17px;
+
+            background: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            box-shadow: 0px 0px 7px 4px rgb(176 176 176 / 6%);
+            border-radius: 5px;
+        }
+
+        .collapsible { 
+            background: white;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+
+            height: 100px;
+            padding: 0 24px 0 16px;
+            font-size: 18px;
+            color: #161515;
+            font-weight: 400;
+            line-height: 28px;
+
+            display: flex;
+            align-items: center;
+
+        }
+
+        .collapsible-symbol {
+            font-size: 28px;
+            color: #8B8B8B;
+            font-weight: normal !important;
+            margin-left: auto;
+        }
+
+        .active, .collapsible:hover {
+            color: #004578;
+            font-weight: 600;
+        }
+
+        .collapsible:after {
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .content {
+            padding: 0 18px 0 45px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+
+        #faqSection {
+            margin-top: 46px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .collapsible-answer {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #161515;
+            margin-bottom: 8px;
+        }
+
+        .collapsible-points {
+            padding-left: 18px;
+            line-height: 30px;
+            color: #161515;
+            font-size: 15px;
+        }
+
+        .faq-split {
+            min-width: 524px;
+        }
+
+        .tile-opened .collapsible-symbol-plus, .collapsible-symbol-minus{
+            display: none;
+        }
+
+        .tile-opened .collapsible-symbol-minus{
+            display: block;
+        }
+
+        .caption {
+            position: absolute;
+            left: 15%;
+            top: 31%;
+            text-align: center;
+            color: #000;
+
+            width: 387px;
+            text-align: left;
+        }
+
+        .caption h1 {
+            font-size: 45px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .caption .hr-line {
+            border: 3px solid #DF7870;
+            background-color: #DF7870;
+            max-width: 75px;
+            margin-top: 0px;
+            margin-right: 3px;
+        }
+
+        .more-faq-section {
+            margin-top: 90px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color: #003a651c;
+        }
+
+        .more-faq-question {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 22px;
+            color: #004578;
+        }
+
+        .more-faq-section hr {
+            width: 72.5px;
+            border-bottom: 3px solid #DF7870;
+        }
+
+        .more-faq-section a {
+            font-size: 18px;
+            font-weight: 700;
+            color: #003965d5;
+        }
+
+        .more-faq-content {
+            font-size: 15px;
+            line-height: 23px;
+            color: #161515;
+        }
+
+        /* All Break Points *********************************** */
+
         @media (max-width: 768px) {
             .secondary-navbar>.navbar-header {
                 border-bottom: solid 1px #e1e1e1;
@@ -238,6 +392,29 @@
 
             .primary-navbar .navbar-header {
                 justify-content: flex-start;
+            }
+
+            .expandable-tile, .faq-split{
+                min-width: unset;
+                width: unset;
+                max-width: 524px;
+            }
+
+            .caption {
+                width: unset;
+                max-width: 387px;
+            }
+
+            .collapsible {
+                font-size: 16px;
+            }
+
+            .collapsible-answer {
+                font-size: 14px;
+            }
+
+            .collapsible-points {
+                font-size: 13px;
             }
         }
 
@@ -405,9 +582,7 @@
             padding: 0;
         }
 
-        .backgroud-banners,
-        .backgroud-banners2,
-        .backgroud-banners3 {
+        .backgroud-banners{
             position: relative;
             /* opacity: 0.65; */
             background-attachment: fixed;
@@ -417,18 +592,9 @@
         }
 
         .backgroud-banners {
-            background-image: url("./asserts/images/main_banner.jpg");
-            min-height: 100%;
-        }
-
-        .backgroud-banners2 {
-            background-image: url("./asserts/images/main_banner_2.jpg");
-            min-height: 100%
-        }
-
-        .backgroud-banners3 {
-            background-image: url("./asserts/images/main_banner_3.jpg");
-            min-height: 100%;
+            background-image: url("./asserts/images/faq_main_banner.png");
+            margin-top: 160px;
+            min-height: 500px;
         }
 
         body,
@@ -436,163 +602,16 @@
             height: 100%;
         }
 
-        .caption {
-            position: absolute;
-            left: 0;
-            top: 28%;
-            width: 100%;
-            text-align: center;
-            color: #000;
-        }
-
-        .caption>img {
-            width: 20%;
-            height: 20%;
-        }
-
-        .main-caption-btnworkwithus {
-            position: absolute;
-            left: 0;
-            top: 46%;
-            width: 100%;
-            text-align: center;
-            color: #000;
-        }
-
-        .main-caption-btnworkwithus>button {
-            width: 10%;
-            height: 25%;
-            background: #FFFFFF;
-            border: 2px solid #FFFFFF;
-            box-sizing: border-box;
-            box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.15);
-            border-radius: 45px;
-            color: #DC7471;
-        }
-
         .btnworkwithus-cs:hover {
             /* background: rgba(220, 116, 113, 0.12); */
             color: #DC7471;
         }
 
-        .main-caption2-heading {
-            position: absolute;
-            left: 0;
-            top: 5%;
-            width: 100%;
-            text-align: center;
-            color: #004578;
-            font-style: normal;
-            font-weight: bold;
-            line-height: 40px
-        }
-
-        .main-caption3-sub-heading {
-            position: absolute;
-            left: 18%;
-            top: 18%;
-            width: 65%;
-            text-align: center;
-            /* color: #004578;  */
-            font-style: normal;
-            font-weight: bold;
-            line-height: 40px
-        }
-
-        .main-caption3-sub-heading-2 {
-            position: absolute;
-            left: 18%;
-            top: 27%;
-            width: 65%;
-            text-align: center;
-            color: #005A9E;
-            font-style: normal;
-            font-weight: bold;
-            line-height: 40px
-        }
-
-        .main-caption3-content-1 {
-            position: absolute;
-            left: 18%;
-            top: 40%;
-            width: 65%;
-            text-align: center;
-            color: #005A9E;
-            font-style: normal;
-            font-weight: bold;
-            line-height: 40px
-        }
-
-        .main-caption3-content-1-rectangle-1 {
-            position: absolute;
-            left: 24%;
-            top: 60%;
-            width: 208px;
-            height: 208px;
-            /* background: #FCF3F2; */
-            border-radius: 5px;
-        }
-
-        .main-caption3-content-1-rectangle-2 {
-            position: absolute;
-            left: 52%;
-            top: 60%;
-            width: 208px;
-            height: 208px;
-            /* background: #FCF3F2; */
-            border-radius: 5px;
-            /* background-image: url("./asserts/images/schoolsanduniversity.png") */
-        }
-
-        main-caption3-content-1-rectangle-2-img {
-            width: 208px;
-            height: 208px;
-        }
-
-        .main-caption3-content-2 {
-            position: absolute;
-            left: 39%;
-            top: 80%;
-            width: 65%;
-            text-align: center;
-            color: #005A9E;
-            font-style: normal;
-            font-weight: bold;
-            line-height: 40px
-        }
-
-        .btnBeaChangeMaker-css {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            padding: 22px 69px;
-            position: absolute;
-            width: 341px;
-            height: 66px;
-            color: #FFFFFF;
-            background: #005A9E;
-            border-radius: 3px;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 22px;
-            line-height: 22px;
-        }
-
-        .carousal {
-            margin: auto;
-            width: 65%;
-            text-align: center;
-        }
-
-        .carousal-img-css {
-            width: 348px;
-            height: 396px;
-        }
     </style>
     <script>
         function bodyOnload() {
-            document.getElementById("btnHome").style.color = "#DF7870";
-                document.getElementById("btnHome").style.background = "rgba(220, 116, 113, 0.12)";
+            document.getElementById("btnFAQ").style.color = "#DF7870";
+                document.getElementById("btnFAQ").style.background = "rgba(220, 116, 113, 0.12)";
             }
         function onClickTamEng(clicked_id) {
             if (clicked_id == "btnEnglish") {
@@ -751,7 +770,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="navbar-navigation-button" href="./faq.html">
+                        <a class="navbar-navigation-button">
                             <button type="button" class="btn btn-cs-secban" id="btnFAQ"
                                 onclick="onClickTamEng(this.id)">FAQ</button>
                         </a>
@@ -766,61 +785,24 @@
             </div>
         </div>
     </div>
+
     <div class="backgroud-banners">
         <div class="caption">
-            <img src="./asserts/images/Chennai Hub.png" />
-        </div>
-        <div class="main-caption-btnworkwithus">
-            <button type="button" class="btn btnworkwithus-cs" id="btnworkwithus">Work With Us</button>
+            <h1>Frequently Asked Questions</h1>
+            <div class="hr-line"></div>
         </div>
     </div>
-    <div class="backgroud-banners2">
-        <div class="main-caption2-heading">
-            <h1 style="font-size: 55px">Current Events</h1>
-            <div class="carousal">
-                <div class="splide" id="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <img src="./asserts/images/current_event_image1.png" class="carousal-img-css">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="./asserts/images/current_event_image2.png"  class="carousal-img-css">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="./asserts/images/current_event_image3.png"  class="carousal-img-css">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    
+    <div id="faqSection"> 
+        <div class="faq-split" id="faqSplit1"></div>
+        <div class="faq-split" id="faqSplit2"></div>
     </div>
-    <div class="backgroud-banners3">
-        <div class="main-caption2-heading">
-            <h1 style="font-size: 45px">Changemaker’s Program</h1>
-        </div>
-        <div class="main-caption3-sub-heading">
-            <h5 style="font-size: 16px">Change begins at home and we want to be able to bring about grassroot level
-                changes through our program. The Changemaker’s program
-                exclusively focuses on creating academic engagements for C-Hub in the city.</h5>
 
-        </div>
-        <div class="main-caption3-sub-heading-2">
-            <h3 style="font-size: 26px">Who can join the Changemaker’s Program ?</h2>
-        </div>
-        <div class="main-caption3-content-1">
-            <div class="main-caption3-content-1-rectangle-1 col-xs-12 col-sm-12">
-                <img style="width:208px; height:208px" src="./asserts/images/students.png">
-            </div>
-            <div class="main-caption3-content-1-rectangle-2 col-xs-12 col-sm-12">
-                <img style="width:208px; height:208px" src="./asserts/images/schoolsanduniversity.png">
-            </div>
-        </div>
-        <div class="main-caption3-content-2">
-            <button id="btnBeaChangeMaker" class="btn btnBeaChangeMaker-css">Be a Change Maker</button>
-        </div>
+    <div class="more-faq-section">
+        <div class="more-faq-question">Still have a question ?</div>
+        <hr>
+        <div class="more-faq-content">If you have further questions that, Please feel free to mail us at</div>
+        <a href="mailto:chub.gcc@gmail.com">chub.gcc@gmail.com</a>
     </div>
 
     <footer class="page-footer font-small pink pt-4">
@@ -843,15 +825,215 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#splide', {
-                perPage: 3,
-                perMove: 1,
-                rewind: true,
-            }).mount();
-        });
+    <script> 
+
+let faqSplit1QuestionsAndAnswers = [
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+        readMore: 'google.com'
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various  like',
+    },
+];
+
+let faqSplit2QuestionsAndAnswers = [
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various opportunities like',
+        answerPoints: [
+            'Platform to pitch and mentor your idea.',
+            'Enable real time data sharing.',
+            'Provide existing society to work and implement the project.',
+            'Partnerships and outreach for ecosystem enablement.',
+            'Capacity enhancement and knowledge services.',
+            'Change management and thought leadership.',
+            'Advisory on innovation specialisation & responsive regulation for different verticals.',
+            'City will act as a living laboratory to build POC.'
+        ],
+        readMore: 'google.com'
+
+    },
+    {
+        question: 'What can we offer ?' ,
+        answer: 'Chennai Innovation Hub offers various  like',
+    },
+];
+
+let faqSplit1Content = '';
+let faqSplit2Content = '';
+
+faqSplit1QuestionsAndAnswers.forEach((value) => {
+    let answerPoints = '';
+    value['answerPoints'] && value['answerPoints'].map((point) => {answerPoints += `<li>${point}</li>`;})
+    let readmoreContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
+
+    faqSplit1Content += `            
+            <div class="expandable-tile">
+                <button class="collapsible">
+                    <div style="font-size: 42px; color: #2B88D8;">•</div>
+                    <div style="max-width: 388px; margin-left: 16px;">${value['question']}</div>
+                    <div class="collapsible-symbol collapsible-symbol-plus">+</div>
+                    <div class="collapsible-symbol collapsible-symbol-minus">-</div>
+                </button>
+                <div class="content">
+                    <div style="margin-bottom: 24px;">
+                        <div class="collapsible-answer">${value['answer']}</div>
+                        <ol class="collapsible-points" style="padding-left: 18px;">
+                            ${answerPoints}
+                        </ol>
+                        ${readmoreContent}
+                    </div>
+                </div>
+            </div>`;
+});
+
+$('#faqSplit1').append(faqSplit1Content);
+
+faqSplit2QuestionsAndAnswers.forEach((value) => {
+    let answerPoints = '';
+    value['answerPoints'] && value['answerPoints'].map((point) => {answerPoints += `<li>${point}</li>`;})
+    let readmoreContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
+
+    faqSplit2Content += `            
+            <div class="expandable-tile">
+                <button class="collapsible">
+                    <div style="font-size: 42px; color: #2B88D8;">•</div>
+                    <div style="max-width: 388px; margin-left: 16px;">${value['question']}</div>
+                    <div class="collapsible-symbol collapsible-symbol-plus">+</div>
+                    <div class="collapsible-symbol collapsible-symbol-minus">-</div>
+                </button>
+                <div class="content">
+                    <div style="margin-bottom: 24px;">
+                        <div class="collapsible-answer">${value['answer']}</div>
+                        <ol class="collapsible-points" style="padding-left: 18px;">
+                            ${answerPoints}
+                        </ol>
+                        ${readmoreContent}
+                    </div>
+                </div>
+            </div>`;
+});
+
+$('#faqSplit2').append(faqSplit2Content);
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      this.classList.remove('tile-opened');
+    } else {
+      content.style.maxHeight = (content.scrollHeight) + "px";
+      this.classList.add('tile-opened');
+    }
+  });
+}
+
     </script>
+
 </body>
 
 </html>
