@@ -44,606 +44,619 @@
 
 
     <style>
-            .hub-logo {
-                height: 30px;
-                border: 0;
+        .hub-logo {
+            height: 30px;
+            border: 0;
+        }
+
+        .header-column-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-language-button,
+        .navbar-vertical-seperater {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .navbar-vertical-seperater {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+        .header-left {
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            padding: 12px 0;
+            color: #ffffff;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .logo-image {
+            height: 45px;
+        }
+
+        .logo-container {
+            padding: 0;
+            margin: 0;
+            width: 252px;
+            padding: 27.5px 0;
+        }
+
+        .hub-logo-image {
+            height: 30px;
+        }
+
+        .logo-text {
+            padding-left: 1rem;
+        }
+
+        .logo-text>p {
+            margin-bottom: 0;
+            padding-top: .2rem;
+        }
+
+        .btn-cs {
+            background: #01243F !important;
+            color: #fcfcfc;
+        }
+
+        .secondHeader {
+            position: absolute;
+            width: 1440px;
+            height: 85px;
+            align-self: auto;
+            top: 60px;
+        }
+
+        .second-nav-item {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+
+        .main-banner {
+            position: absolute;
+            width: 2051.01px;
+            height: 845px;
+            left: -36px;
+            top: 85px;
+        }
+
+        .btn-cs-secban {
+            background: #fcfcfc;
+            color: #323130;
+            border-radius: 20px;
+        }
+
+        .navbar-custom {
+            height: 85px;
+            top: 69px;
+        }
+
+        footer {
+            width: 100%;
+            height: auto;
+            background-color: #003A65;
+            color: white;
+        }
+
+        .footer-column-section {
+            display: flex;
+            justify-content: center;
+            height: 110px;
+            align-items: center;
+        }
+
+        .footer-column-section a {
+            cursor: pointer;
+            color: white;
+        }
+
+        .footer-column-section input {
+            width: 250px;
+            background-color: #01243F;
+            height: 33px;
+            border: none;
+            padding-left: 15px;
+            font-size: 13px;
+        }
+
+        .footer-column-section button {
+            width: 80px;
+            font-size: 14px;
+            color: white;
+            background-color: #afafaf;
+            height: 33px;
+        }
+
+        .btn-cs-secban:hover {
+            background: rgba(220, 116, 113, 0.12);
+            color: #DC7471;
+        }
+
+        .main-banner-style>img {
+            width: 100%;
+            height: 71rem;
+            padding: 0;
+        }
+
+        .main-banner-style {
+            padding: 0;
+        }
+
+        .secondary-navbar {
+            margin-top: 75px !important;
+        }
+
+        .navbar-navigation-button {
+            padding: 25px 0 !important;
+        }
+
+        .nav>li>a:focus,
+        .nav>li>a:hover {
+            background-color: unset;
+        }
+
+        .secondary-navbar .navbar-brand {
+            padding: 25px 15px;
+            height: 85px;
+        }
+
+        .primary-navbar .navbar-brand {
+            padding: 15px 15px;
+            height: 75px;
+            color: white;
+        }
+
+        .navbar-collapse {
+            border: none;
+        }
+
+        .navbar-toggle {
+            /* (80px - button height 34px) / 2 = 23px */
+            margin-top: 23px;
+            padding: 9px 10px !important;
+        }
+
+        .navbar-fixed-top .navbar-collapse {
+            max-height: unset !important;
+        }
+
+        @media (max-width: 768px) {
+            .secondary-navbar>.navbar-header {
+                border-bottom: solid 1px #e1e1e1;
             }
-    
-            .header-column-section {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+
+            .primary-navbar .navbar-header {
+                justify-content: flex-start;
             }
-    
-            .navbar-language-button,
-            .navbar-vertical-seperater {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
+        }
+
+        @media (min-width: 768px) {
+            .secondary-navbar .navbar-nav>li>a {
+                padding-top: 29px;
+                padding-bottom: 29px;
+                line-height: 27px;
             }
-    
-            .navbar-vertical-seperater {
-                padding-left: 10px !important;
-                padding-right: 10px !important;
+
+            .btn {
+                padding-left: 6px;
+                padding-right: 6px;
             }
-    
-            .header-left {
-                color: #ffffff;
-                display: flex;
-                flex-direction: column;
+
+            .navbar-responsive-container {
+                width: 750px;
             }
-    
-            .logo {
-                padding: 12px 0;
-                color: #ffffff;
-                display: flex;
-                flex-direction: row;
+        }
+
+        @media (min-width: 992px) {
+            .navbar-responsive-container {
+                width: 970px;
             }
-    
-            .logo-image {
-                height: 45px;
+
+            .primary-navbar .navbar-nav>li>a {
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
-    
+
             .logo-container {
-                padding: 0;
-                margin: 0;
-                width: 252px;
-                padding: 27.5px 0;
-            }
-    
-            .hub-logo-image {
-                height: 30px;
-            }
-    
-            .logo-text {
-                padding-left: 1rem;
-            }
-    
-            .logo-text>p {
-                margin-bottom: 0;
-                padding-top: .2rem;
-            }
-    
-            .btn-cs {
-                background: #01243F !important;
-                color: #fcfcfc;
-            }
-    
-            .secondHeader {
-                position: absolute;
-                width: 1440px;
-                height: 85px;
-                align-self: auto;
-                top: 60px;
-            }
-    
-            .second-nav-item {
-                padding-top: 25px !important;
-                padding-bottom: 25px !important;
-                padding-left: 5px !important;
-                padding-right: 5px !important;
-            }
-    
-            .main-banner {
-                position: absolute;
-                width: 2051.01px;
-                height: 845px;
-                left: -36px;
-                top: 85px;
-            }
-    
-            .btn-cs-secban {
-                background: #fcfcfc;
-                color: #323130;
-                border-radius: 20px;
-            }
-    
-            .navbar-custom {
-                height: 85px;
-                top: 69px;
-            }
-    
-            footer {
                 width: 100%;
-                height: auto;
-                background-color: #003A65;
-                color: white;
             }
-    
-            .footer-column-section {
-                display: flex;
-                justify-content: center;
-                height: 110px;
-                align-items: center;
+
+            .btn {
+                padding: 6px 12px;
             }
-    
-            .footer-column-section a {
-                cursor: pointer;
-                color: white;
-            }
-    
-            .footer-column-section input {
-                width: 250px;
-                background-color: #01243F;
-                height: 33px;
-                border: none;
-                padding-left: 15px;
+        }
+
+        @media (max-width: 992px) {
+
+            footer {
                 font-size: 13px;
             }
-    
-            .footer-column-section button {
-                width: 80px;
-                font-size: 14px;
-                color: white;
-                background-color: #afafaf;
-                height: 33px;
-            }
-    
-            .btn-cs-secban:hover {
-                background: rgba(220, 116, 113, 0.12);
-                color: #DC7471;
-            }
-    
-            .main-banner-style>img {
-                width: 100%;
-                height: 71rem;
-                padding: 0;
-            }
-    
-            .main-banner-style {
-                padding: 0;
-            }
-    
-            .secondary-navbar {
-                margin-top: 75px !important;
-            }
-    
-            .navbar-navigation-button {
-                padding: 25px 0 !important;
-            }
-    
-            .nav>li>a:focus,
-            .nav>li>a:hover {
-                background-color: unset;
-            }
-    
-            .secondary-navbar .navbar-brand {
-                padding: 25px 15px;
-                height: 85px;
-            }
-    
-            .primary-navbar .navbar-brand {
-                padding: 15px 15px;
-                height: 75px;
-                color: white;
-            }
-    
-            .navbar-collapse {
-                border: none;
-            }
-    
-            .navbar-toggle {
-                /* (80px - button height 34px) / 2 = 23px */
-                margin-top: 23px;
-                padding: 9px 10px !important;
-            }
-    
-            .navbar-fixed-top .navbar-collapse {
-                max-height: unset !important;
-            }
-    
-            @media (max-width: 768px) {
-                .secondary-navbar>.navbar-header {
-                    border-bottom: solid 1px #e1e1e1;
-                }
-    
-                .primary-navbar .navbar-header {
-                    justify-content: flex-start;
-                }
-            }
-    
-            @media (min-width: 768px) {
-                .secondary-navbar .navbar-nav>li>a {
-                    padding-top: 29px;
-                    padding-bottom: 29px;
-                    line-height: 27px;
-                }
-    
-                .btn {
-                    padding-left: 6px;
-                    padding-right: 6px;
-                }
-    
-                .navbar-responsive-container {
-                    width: 750px;
-                }
-            }
-    
-            @media (min-width: 992px) {
-                .navbar-responsive-container {
-                    width: 970px;
-                }
-    
-                .primary-navbar .navbar-nav>li>a {
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                }
-    
-                .logo-container {
-                    width: 100%;
-                }
-    
-                .btn {
-                    padding: 6px 12px;
-                }
-            }
-    
-            @media (max-width: 992px) {
-    
-                footer {
-                    font-size: 13px;
-                }
-    
-                .footer-column-section {
-                    height: 80px;
-                }
-    
-                .footer-column-section div {
-                    width: 330px;
-                }
-    
-                .primary-navbar .navbar-header {
-                    display: flex;
-                    justify-content: center;
-                }
-    
-                .navbar-navigation-button {
-                    padding: 0 !important;
-                }
-    
-                .btn-cs-secban {
-                    width: 100%;
-                    padding: 14px;
-                    border-radius: 0;
-                }
-    
-                /* collapse the navbar from medium screen */
-                .navbar-fixed-top {
-                    border-width: 0 0 1px;
-                }
-    
-                .navbar-header {
-                    float: none;
-                }
-    
-                .navbar-toggle {
-                    display: block;
-                }
-    
-                .navbar-collapse {
-                    border-top: 1px solid transparent;
-                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                }
-    
-                .navbar-collapse.collapse {
-                    display: none !important;
-                }
-    
-                .navbar-nav {
-                    float: none !important;
-                    margin: 7.5px -15px;
-                }
-    
-                .navbar-nav>li {
-                    float: none;
-                }
-    
-                .navbar-nav>li>a {
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                }
-    
-                .navbar-text {
-                    float: none;
-                    margin: 15px 0;
-                }
-    
-                /* since 3.1.0 */
-                .navbar-collapse.collapse.in {
-                    display: block !important;
-                }
-    
-                .collapsing {
-                    overflow: hidden !important;
-                }
-            }
-    
-            @media (max-width: 472px) {
-                .primary-navbar .navbar-header {
-                    justify-content: flex-start;
-                }
-            }
-    
-            @media (min-width: 1200px) {
-                .navbar-responsive-container {
-                    width: 1170px;
-                }
-    
-                .btn {
-                    padding: 6px 12px;
-                }
-            }
-    
-            @media (min-width: 1600px) {
-                .navbar-responsive-container {
-                    width: 1470px;
-                }
-    
-                .btn {
-                    padding: 6px 12px;
-                }
-            }
-    
-            @media (min-width: 2100px) {
-                .navbar-responsive-container {
-                    width: 1970px;
-                }
-            }
-    
-    
-            .btn-cs-secban:hover {
-                background: rgba(220, 116, 113, 0.12);
-                color: #DC7471;
-            }
-    
-            .main-banner-style>img {
-                width: 100%;
-                height: 71rem;
-                padding: 0;
-            }
-    
-            .main-banner-style {
-                padding: 0;
-            }
-    
-            .backgroud-banners,
-            .backgroud-banners2,
-            .backgroud-banners3 {
-                position: relative;
-                /* opacity: 0.65; */
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+
+            .footer-column-section {
+                height: 80px;
             }
 
-            .backgroud-banners-page2-sec1,
-            .backgroud-banners-page2-sec2,
-            .backgroud-banners-page2-sec3 {
-                position: relative;
-                /* opacity: 0.65; */
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-    
-            .backgroud-banners {
-                background-image: url("./asserts/images/main_banner.jpg");
-                min-height: 100%;
-            }
-    
-            .backgroud-banners2 {
-                background-image: url("./asserts/images/main_banner_2.jpg");
-                min-height: 100%
-            }
-    
-            .backgroud-banners3 {
-                background-image: url("./asserts/images/main_banner_3.jpg");
-                min-height: 100%;
+            .footer-column-section div {
+                width: 330px;
             }
 
-            .backgroud-banners-page2-sec1{
-                background-color: #FFFFFF;
-                min-height: 100%;
-            }
-            .backgroud-banners-page2-sec2{
-                
-            }
-            .backgroud-banners-page2-sec3 {
-
-            }
-    
-            body,
-            html {
-                height: 100%;
-            }
-    
-            .caption {
-                position: absolute;
-                left: 0;
-                top: 28%;
-                width: 100%;
-                text-align: center;
-                color: #000;
-            }
-    
-            .caption>img {
-                width: 20%;
-                height: 20%;
-            }
-    
-            .main-caption-btnworkwithus {
-                position: absolute;
-                left: 0;
-                top: 46%;
-                width: 100%;
-                text-align: center;
-                color: #000;
-            }
-    
-            .main-caption-btnworkwithus>button {
-                width: 10%;
-                height: 25%;
-                background: #FFFFFF;
-                border: 2px solid #FFFFFF;
-                box-sizing: border-box;
-                box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.15);
-                border-radius: 45px;
-                color: #DC7471;
-            }
-    
-            .btnworkwithus-cs:hover {
-                /* background: rgba(220, 116, 113, 0.12); */
-                color: #DC7471;
-            }
-    
-            .main-caption2-heading {
-                position: absolute;
-                left: 0;
-                top: 5%;
-                width: 100%;
-                text-align: center;
-                color: #004578;
-                font-style: normal;
-                font-weight: bold;
-                line-height: 40px
-            }
-    
-            .main-caption3-sub-heading {
-                position: absolute;
-                left: 18%;
-                top: 18%;
-                width: 65%;
-                text-align: center;
-                /* color: #004578;  */
-                font-style: normal;
-                font-weight: bold;
-                line-height: 40px
-            }
-    
-            .main-caption3-sub-heading-2 {
-                position: absolute;
-                left: 18%;
-                top: 27%;
-                width: 65%;
-                text-align: center;
-                color: #005A9E;
-                font-style: normal;
-                font-weight: bold;
-                line-height: 40px
-            }
-    
-            .main-caption3-content-1 {
-                position: absolute;
-                left: 18%;
-                top: 40%;
-                width: 65%;
-                text-align: center;
-                color: #005A9E;
-                font-style: normal;
-                font-weight: bold;
-                line-height: 40px
-            }
-    
-            .main-caption3-content-1-rectangle-1 {
-                position: absolute;
-                left: 24%;
-                top: 60%;
-                width: 208px;
-                height: 208px;
-                /* background: #FCF3F2; */
-                border-radius: 5px;
-            }
-    
-            .main-caption3-content-1-rectangle-2 {
-                position: absolute;
-                left: 52%;
-                top: 60%;
-                width: 208px;
-                height: 208px;
-                /* background: #FCF3F2; */
-                border-radius: 5px;
-                /* background-image: url("./asserts/images/schoolsanduniversity.png") */
-            }
-    
-            main-caption3-content-1-rectangle-2-img {
-                width: 208px;
-                height: 208px;
-            }
-    
-            .main-caption3-content-2 {
-                position: absolute;
-                left: 39%;
-                top: 80%;
-                width: 65%;
-                text-align: center;
-                color: #005A9E;
-                font-style: normal;
-                font-weight: bold;
-                line-height: 40px
-            }
-    
-            .btnBeaChangeMaker-css {
+            .primary-navbar .navbar-header {
                 display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                padding: 22px 69px;
-                position: absolute;
-                width: 341px;
-                height: 66px;
-                color: #FFFFFF;
-                background: #005A9E;
-                border-radius: 3px;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 22px;
-                line-height: 22px;
-            }
-    
-            .carousal {
-                margin: auto;
-                width: 65%;
-                text-align: center;
-            }
-    
-            .carousal-img-css {
-                width: 348px;
-                height: 396px;
+                justify-content: center;
             }
 
-            .about-us-sec1-captiop{
-                        position: absolute;
-                        left: 0;
-                        top: 28%;
-                        width: 100%;
-                        text-align: center;
-                        color: #004578;
+            .navbar-navigation-button {
+                padding: 0 !important;
             }
 
+            .btn-cs-secban {
+                width: 100%;
+                padding: 14px;
+                border-radius: 0;
+            }
 
-            .about-us-section2-dev1 {
-                position: absolute;
-                
-                top: 60%;
-                width: 50%;
-                height: 250px;
-                /* background: #FCF3F2; */
-                background-color: #DC7471;
-                border-radius: 5px;
+            /* collapse the navbar from medium screen */
+            .navbar-fixed-top {
+                border-width: 0 0 1px;
             }
-    
-            .about-us-section2-dev2 {
-                position: absolute;
-                left: 52%;
-                top: 60%;
-                width: 50%;
-                height: 250px;
-                /* background: #FCF3F2; */
-                background-color: rebeccapurple;
-                border-radius: 5px;
-                /* background-image: url("./asserts/images/schoolsanduniversity.png") */
+
+            .navbar-header {
+                float: none;
             }
-        </style>
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .navbar-collapse {
+                border-top: 1px solid transparent;
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-collapse.collapse {
+                display: none !important;
+            }
+
+            .navbar-nav {
+                float: none !important;
+                margin: 7.5px -15px;
+            }
+
+            .navbar-nav>li {
+                float: none;
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .navbar-text {
+                float: none;
+                margin: 15px 0;
+            }
+
+            /* since 3.1.0 */
+            .navbar-collapse.collapse.in {
+                display: block !important;
+            }
+
+            .collapsing {
+                overflow: hidden !important;
+            }
+        }
+
+        @media (max-width: 472px) {
+            .primary-navbar .navbar-header {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .navbar-responsive-container {
+                width: 1170px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .navbar-responsive-container {
+                width: 1470px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (min-width: 2100px) {
+            .navbar-responsive-container {
+                width: 1970px;
+            }
+        }
+
+
+        .btn-cs-secban:hover {
+            background: rgba(220, 116, 113, 0.12);
+            color: #DC7471;
+        }
+
+        .main-banner-style>img {
+            width: 100%;
+            height: 71rem;
+            padding: 0;
+        }
+
+        .main-banner-style {
+            padding: 0;
+        }
+
+        .backgroud-banners,
+        .backgroud-banners2,
+        .backgroud-banners3 {
+            position: relative;
+            /* opacity: 0.65; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .backgroud-banners-page2-sec1,
+        .backgroud-banners-page2-sec2,
+        .backgroud-banners-page2-sec3 {
+            position: relative;
+            /* opacity: 0.65; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .backgroud-banners {
+            background-image: url("./asserts/images/main_banner.jpg");
+            min-height: 100%;
+        }
+
+        .backgroud-banners2 {
+            background-image: url("./asserts/images/main_banner_2.jpg");
+            min-height: 100%
+        }
+
+        .backgroud-banners3 {
+            background-image: url("./asserts/images/main_banner_3.jpg");
+            min-height: 100%;
+        }
+
+        .backgroud-banners-page2-sec1 {
+            background-color: #FFFFFF;
+            min-height: 100%;
+        }
+
+        .backgroud-banners-page2-sec2 {}
+
+        .backgroud-banners-page2-sec3 {}
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 28%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption>img {
+            width: 20%;
+            height: 20%;
+        }
+
+        .main-caption-btnworkwithus {
+            position: absolute;
+            left: 0;
+            top: 46%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .main-caption-btnworkwithus>button {
+            width: 10%;
+            height: 25%;
+            background: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.15);
+            border-radius: 45px;
+            color: #DC7471;
+        }
+
+        .btnworkwithus-cs:hover {
+            /* background: rgba(220, 116, 113, 0.12); */
+            color: #DC7471;
+        }
+
+        .main-caption2-heading {
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 100%;
+            text-align: center;
+            color: #004578;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-sub-heading {
+            position: absolute;
+            left: 18%;
+            top: 18%;
+            width: 65%;
+            text-align: center;
+            /* color: #004578;  */
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-sub-heading-2 {
+            position: absolute;
+            left: 18%;
+            top: 27%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-content-1 {
+            position: absolute;
+            left: 18%;
+            top: 40%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .main-caption3-content-1-rectangle-1 {
+            position: absolute;
+            left: 24%;
+            top: 60%;
+            width: 208px;
+            height: 208px;
+            /* background: #FCF3F2; */
+            border-radius: 5px;
+        }
+
+        .main-caption3-content-1-rectangle-2 {
+            position: absolute;
+            left: 52%;
+            top: 60%;
+            width: 208px;
+            height: 208px;
+            /* background: #FCF3F2; */
+            border-radius: 5px;
+            /* background-image: url("./asserts/images/schoolsanduniversity.png") */
+        }
+
+        main-caption3-content-1-rectangle-2-img {
+            width: 208px;
+            height: 208px;
+        }
+
+        .main-caption3-content-2 {
+            position: absolute;
+            left: 39%;
+            top: 80%;
+            width: 65%;
+            text-align: center;
+            color: #005A9E;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 40px
+        }
+
+        .btnBeaChangeMaker-css {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 22px 69px;
+            position: absolute;
+            width: 341px;
+            height: 66px;
+            color: #FFFFFF;
+            background: #005A9E;
+            border-radius: 3px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        .carousal {
+            margin: auto;
+            width: 65%;
+            text-align: center;
+        }
+
+        .carousal-img-css {
+            width: 348px;
+            height: 396px;
+        }
+
+        .about-us-sec1-captiop {
+            position: absolute;
+            left: 0;
+            top: 28%;
+            width: 100%;
+            text-align: center;
+            color: #004578;
+        }
+
+
+        .about-us-section2-dev1 {
+            position: absolute;
+
+            top: 60%;
+            width: 50%;
+            height: 250px;
+            /* background: #FCF3F2; */
+            background-color: #DC7471;
+            border-radius: 5px;
+        }
+
+        .about-us-section2-dev2 {
+            position: absolute;
+            left: 52%;
+            top: 60%;
+            width: 50%;
+            height: 250px;
+            /* background: #FCF3F2; */
+            background-color: rebeccapurple;
+            border-radius: 5px;
+            /* background-image: url("./asserts/images/schoolsanduniversity.png") */
+        }
+
+        .backgroud-about-us-ripon-building {
+            position: relative;
+            /* opacity: 0.65; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .backgroud-about-us-ripon-building {
+            /* background-image: url("./asserts/images/Ripon_building.png"); */
+            min-height: 100%;
+            max-width: 50%;
+        }
+    </style>
     <script>
 
         function bodyOnload() {
@@ -831,64 +844,210 @@
 
 
     ----
-
-
-    <div class="backgroud-banners-page2-sec1">
-            <div class="caption">
-                    <h4 style="color: #004578; font-weight: 600; font-size: 45px;">About Us</h4>
+    <div class="container" style="margin-top:200px;">
+        <div class="row">
+            <div class="col-sm-12" style="text-align: center;">
+                <h2 style="font-size: 45px; color:#004578">About Us</h2>
             </div>
-            <div class="main-caption-btnworkwithus">
-                    <div class="main-caption3-content-1">
-                            <div class="about-us-section2-dev1 col-xs-12 col-sm-12">
-                                
-                            </div>
-                            <div class="about-us-section2-dev2 col-xs-12 col-sm-12">
-                                
-                            </div>
-                        </div>
+            <div class="col-sm-4 backgroud-about-us-ripon-building" style="margin-top:10px;">
+                <h2 style="color:#DF7870; font-size: 40px">
+                    <p>Innovate. </p>
+                    <p></p>Sustain. </p>
+                    <p></p>Enable.</p>
+                </h2>
+
             </div>
-        </div>
-        <div class="backgroud-banners2">
-            <div class="main-caption2-heading">
-                <h1 style="font-size: 55px">Current Events</h1>
-                <div class="carousal">
-                  
+            <div class="col-sm-8" style="margin-bottom: 5px">
+                <p style="font-size: 16px; color:#004578">
+                    C-Hub (Chennai-Hub) is the first of its kind innovation Hub set up by the Greater Chennai
+                    Corporation. This is an attempt to foster and promote innovation across different verticals. It
+                    harps on the need for Academia, Industries and GCC to work together to encourage good and innovative
+                    ideas.
+                </p>
+                <p style="font-size: 16px; color:#004578">
+                    A multidisciplinary team will be put together in order to approach problems through a holistic lens.
+                    The innovation hub will host stakeholders from different verticals to be part of this platform. It
+                    is an inclusive platform which will attempt to solve social, environmental and urban problems in the
+                    city together with its citizens.
+                </p>
+                <p style="font-size: 16px; color:#004578">
+                    A new paradigm is required that essentially brings urban stakeholders to collectively provide the
+                    know-how to urban challenges ensuring their expertise and perspective is reflected in urban
+                    solutioning for the future. A coming together of these critical stakeholders, termed as the
+                    Quadruple Helix, can aid in active flow of ideas and information to create both value and reduce
+                    risks, in essence, creating an ‘innovation value-network’ that spills benefits across the urban
+                    ecosystem gearing our cities for the future.
+                </p>
+            </div>
+            <div class="col-sm-12" style="text-align: center; color: #004578;">
+                <h2 style="font-size: 32px;">Core Functions</h2>
+                <div class="row" style="text-align: center; margin-bottom: 5px">
+                    <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
+                </div>
+                <div class="col-sm-4" style="text-align: left; font-size: 20px">
+                    <!-- <span>
+                        <img src="./asserts/images/blue_tick.png" style="width: 33px; height:33px"></span>
+                    
+                    <span>Enable and sustain the discovery and deployment of innovation to tackle urban challenges</span> -->
+                    <img src="./asserts/images/core_functions-image1.png" style="width: 302px">
+                </div>
+                <div class="col-sm-4" style="text-align: left; font-size: 20px">
+                    <!-- <p>
+                        Increasing economic growth
+                    </p> -->
+                    <img src="./asserts/images/core_functions-image2.png" style="width: 302px">
+                </div>
+                <div class="col-sm-4" style="text-align: left; font-size: 20px">
+                    <!-- Enhance quality of life and ensure sustainability in processes -->
+                    <img src="./asserts/images/core_functions-image3.png" style="width: 302px">
                 </div>
             </div>
-    
-        </div>
-        <div class="backgroud-banners3">
-            <div class="main-caption2-heading">
-                <h1 style="font-size: 45px">Changemaker’s Program</h1>
+            <div class="col-sm-12" style="background-color: #FFF8F8; height:100%; margin-top: 15px">
+                <div style="text-align: center">
+                    <h2 style="color: #004578; font-size:40px">Team</h2>
+                    <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
+                </div>
+                <div class="col-sm-12">
+                    <div class="col-sm-3">
+                        <img src="./asserts/images/about_us_team-image_1.png" style="width: 160px; height: 160px;">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="./asserts/images/about_us_team-image_2.png" style="width: 160px; height: 160px;">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="./asserts/images/about_us_team-image_3.png" style="width: 160px; height: 160px;">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="./asserts/images/about_us_team-image_4.png" style="width: 160px; height: 160px;">
+                    </div>
+                </div>
+
             </div>
-            
+
+            <div class="col-sm-12" style="background-color: #FFFFFF; color: #004578; height:100%; margin-top: 15px">
+                <h2 style="text-align: center; font-size: 40px">
+                    Mission
+                </h2>
+                <div class="row" style="text-align: center; margin-bottom: 5px">
+                    <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
+                </div>
+                <div class="col-sm-12">
+                    <div class="col-sm-6">
+                        <div class="col-sm-3" style="text-align: right;">
+                            <img src="./asserts/images/about_us_mission-img1.png" style="width: 56px; height: 54.67px;">
+                        </div>
+                        <div class="col-sm-9">
+                            <p style="font-size: 16px">
+                                A cross-boundary collaborative regime instituted to decide on innovation pathways.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-3" style="text-align: right;">
+                            <img src="./asserts/images/about_us_mission-img2.png" style="width: 56px; height: 54.67px;">
+                        </div>
+                        <div class="col-sm-9">
+                            <p style="font-size: 16px">
+                                Building partnerships between the quadruple helix (QH) of stakeholders into an ecosystem
+                                for know-how solutioning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12" style="background-color: #FFFFFF; color: #004578; height:100%; margin-top: 15px">
+                <h2 style="text-align: center; font-size: 40px">
+                    Vision
+                </h2>
+                <div class="row" style="text-align: center; margin-bottom: 5px">
+                    <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
+                </div>
+                <div class="col-sm-12 row">
+                    <div class="col-sm-6">
+                        <div class="col-sm-3" style="text-align: right;">
+                            <img src="./asserts/images/about_us_vision-img1.png" style="width: 56px; height: 54.67px;">
+                        </div>
+                        <div class="col-sm-9">
+                            <p style="font-size: 16px">
+                                To become the largest think tank in the Country in the next three years.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-3" style="text-align: right;">
+                            <img src="./asserts/images/about_us_vision-img2.png" style="width: 56px; height: 54.67px;">
+                        </div>
+                        <div class="col-sm-9">
+                            <p style="font-size: 16px">
+                                To successfully establish Proof of concept by piloting in Chennai.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 row" style="margin-top: 50px">
+                    <div class="col-sm-6">
+                        <div class="col-sm-3" style="text-align: right;">
+                            <img src="./asserts/images/about_us_vision-img3.png" style="width: 56px; height: 54.67px;">
+                        </div>
+                        <div class="col-sm-9">
+                            <p style="font-size: 16px">
+                                To create a working template that can be adapted by other cities in Tamil Nadu.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-3" style="text-align: right;">
+                            <img src="./asserts/images/about_us_vision-img4.png" style="width: 56px; height: 54.67px;">
+                        </div>
+                        <div class="col-sm-9">
+                            <p style="font-size: 16px">
+                                To be a platform for intersectionality of academics, entrepreneurship and the Chennai
+                                Corporation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12" style="background-color: #F2FBFF; color: #004578; height:100%; margin-top: 15px">
+                <h2 style="text-align: center; font-size: 40px">
+                    Values
+                </h2>
+                <div class="row" style="text-align: center; margin-bottom: 5px">
+                    <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
+                </div>
+                <div class="col-sm-12" style="text-align: center;">
+                    <div class="col-sm-2">
+                            
+                    </div>
+                    <div class="col-sm-8">
+                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <div class="col-sm-12"  style="text-align: center;">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-10">
+                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+            </div>
         </div>
-
-
+    </div>
     -----
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-sec-one">
-            <div class="about-us-sec1-captiop">
-                    
-            </div>
-        </div><!-- /.col-lg-6 -->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
     <footer class="page-footer font-small pink pt-4">
         <div class="row" style="margin: 0">
             <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
@@ -909,4 +1068,5 @@
         </div>
     </footer>
 </body>
-</html>s
+
+</html>
