@@ -475,7 +475,7 @@
             color: #DC7471;
         }
 
-        .main-caption2-heading {
+        /* .main-caption2-heading {
             position: absolute;
             left: 0;
             top: 5%;
@@ -485,7 +485,7 @@
             font-style: normal;
             font-weight: bold;
             line-height: 40px
-        }
+        } */
 
         .main-caption3-sub-heading {
             position: absolute;
@@ -588,6 +588,29 @@
             width: 348px;
             height: 396px;
         }
+
+        @media screen and (max-width: 800px) {
+            #divCarausal {
+                visibility: hidden;
+                clear: both;
+                float: left;
+                margin: 10px auto 5px 20px;
+                width: 28%;
+                display: none;
+            }
+        }
+        @media screen and (min-width: 800px) {
+            #divCarausalMobile {
+                visibility: visible;
+                clear: both;
+                float: left;
+                margin: 10px auto 5px 20px;
+                width: 28%;
+                display: none;
+            }
+        }
+        
+
     </style>
     <script>
         function bodyOnload() {
@@ -780,30 +803,44 @@
         text-align: center;">
             <!-- <button type="button" class="btn btnworkwithus-cs" id="btnworkwithus">Work With Us</button> -->
             <a class="navbar-navigation-button" href="./workwithus.html">
-                <button type="button" class="btn" id="btnWorkWithUsInSIdeBanner"
-                    onclick="onClickTamEng(this.id)"
-                    style="color: #DC7471; font-size: 18px; width: 163px; height: 52px;
+                <button type="button" class="btn" id="btnWorkWithUsInSIdeBanner" onclick="onClickTamEng(this.id)" style="color: #DC7471; font-size: 18px; width: 163px; height: 52px;
                     border: 2px solid #FFFFFF; box-sizing: border-box; 
                     box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.15); border-radius: 45px; margin-top:15px;">
                     Work With Us</button>
             </a>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 backgroud-banners2">
-        <div class="main-caption2-heading">
+    <div class="col-xs-12 col-sm-12 backgroud-banners2" id="divCarausal">
+        <div class="main-caption2-heading" style="text-align: center;
+        color: #004578; height: 100%;">
             <h1 style="font-size: 55px">Current Events</h1>
             <div class="carousal">
                 <div class="splide" id="splide">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src="./asserts/images/current_event_image1.png" class="carousal-img-css">
+                                <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
                             </li>
                             <li class="splide__slide">
-                                <img src="./asserts/images/current_event_image2.png" class="carousal-img-css">
+                                <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
                             </li>
                             <li class="splide__slide">
-                                <img src="./asserts/images/current_event_image3.png" class="carousal-img-css">
+                                <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
                             </li>
                         </ul>
                     </div>
@@ -812,6 +849,45 @@
         </div>
 
     </div>
+    <div class="col-xs-12 col-sm-12 backgroud-banners2" id="divCarausalMobile" >
+            <div class="main-caption2-heading" style="text-align: center;
+            color: #004578; height: 100%;">
+                <h1 style="font-size: 55px">Current Events</h1>
+                <div class="carousal">
+                    <div class="splide" id="splidemobile" style="visibility: hidden">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
+                                        class="carousal-img-css">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
+                                        class="carousal-img-css">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
+                                        class="carousal-img-css">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
+                                        class="carousal-img-css">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
+                                        class="carousal-img-css">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
+                                        class="carousal-img-css">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
     <div class="col-xs-12 col-sm-12 backgroud-banners3">
         <div class="col-xs-12 col-sm-12">
             <h1 style="font-size: 45px; color: #004578; text-align: center;">Changemaker’s Program</h1>
@@ -849,8 +925,7 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
-            <button id="btnBeaChangeMaker" class="btn" 
-            style="text-align: center; width: 341px; height: 66px;
+            <button id="btnBeaChangeMaker" class="btn" style="text-align: center; width: 341px; height: 66px;
             background: #004578; border-radius: 3px; color: #FFFFFF; font-size: 22px">Be a Change Maker</button>
         </div>
     </div>
@@ -879,6 +954,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             new Splide('#splide', {
                 perPage: 3,
+                perMove: 1,
+                rewind: true,
+            }).mount();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#splidemobile', {
+                perPage: 1,
                 perMove: 1,
                 rewind: true,
             }).mount();
