@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ta">
 
 <head>
     <meta charset="utf-8">
@@ -7,25 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>GCC C-HUB</title>
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-
-    <!-- Optional theme -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"> -->
-
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
-
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -657,9 +638,21 @@
             max-width: 50%;
         }
     </style>
+
+    <!-- About JSON Coontent -->
+    <script>
+
+    </script>
+
+    <script type="text/javascript" src="./data/about_us.js"></script>
     <script>
 
         function bodyOnload() {
+            var executed = false;
+            if (!executed) {
+                executed = true;
+                loadContentData("english");
+            }
             document.getElementById("btnAboutUs").style.color = "#DF7870";
             document.getElementById("btnAboutUs").style.background = "rgba(220, 116, 113, 0.12)";
         }
@@ -668,19 +661,51 @@
                 document.getElementById("btnTamil").style.background = "#01243F";
                 document.getElementById("btnEnglish").style.background = '#1F4A6B';
                 document.getElementById("btnEnglish").style.color = '#ffffff';
+                loadContentData("english");
             }
             if (clicked_id == "btnTamil") {
                 document.getElementById("btnTamil").style.background = "#1F4A6B";
                 document.getElementById("btnEnglish").style.background = '#01243F';
                 document.getElementById("btnTamil").style.color = '#ffffff';
+                loadContentData("tamil");
             }
         }
+        var loadContentData = (function () {
+            return function (language) {
+                    var stringyfy = JSON.stringify(about_us)
+                    var jsonObject = JSON.parse(stringyfy);
+                    if(language === "english"){
+                        document.getElementById("hMainHeader").innerHTML = jsonObject.english.about_us.first_row_header;
+
+                        document.getElementById("pfirst_row_paragraph_1").innerHTML = jsonObject.english.about_us.first_row_paragraph[0];
+                        document.getElementById("pfirst_row_paragraph_2").innerHTML = jsonObject.english.about_us.first_row_paragraph[1];
+                        document.getElementById("pfirst_row_paragraph_3").innerHTML = jsonObject.english.about_us.first_row_paragraph[2];
+                        
+                        document.getElementById("pSubHeader_1").innerHTML = jsonObject.english.about_us.first_row_sub_header[0];
+                        document.getElementById("pSubHeader_2").innerHTML = jsonObject.english.about_us.first_row_sub_header[1];
+                        document.getElementById("pSubHeader_3").innerHTML = jsonObject.english.about_us.first_row_sub_header[2];
+                        
+                    } else if(language === "tamil")
+                    {
+                        document.getElementById("hMainHeader").innerHTML = jsonObject.tamil.about_us.first_row_header;
+
+                        document.getElementById("pfirst_row_paragraph_1").innerHTML = jsonObject.tamil.about_us.first_row_paragraph[0];
+                        document.getElementById("pfirst_row_paragraph_2").innerHTML = jsonObject.tamil.about_us.first_row_paragraph[1];
+                        document.getElementById("pfirst_row_paragraph_3").innerHTML = jsonObject.tamil.about_us.first_row_paragraph[2];
+
+                        document.getElementById("pSubHeader_1").innerHTML = jsonObject.tamil.about_us.first_row_sub_header[0];
+                        document.getElementById("pSubHeader_2").innerHTML = jsonObject.tamil.about_us.first_row_sub_header[1];
+                        document.getElementById("pSubHeader_3").innerHTML = jsonObject.tamil.about_us.first_row_sub_header[2];
+                    }
+                    
+            };
+        })();
     </script>
 </head>
 
 <body onload="bodyOnload()">
 
-
+    <div></div>
     <nav class="navbar navbar-default navbar-fixed-top primary-navbar"
         style="background: #01243F; margin: 0; border: 0; z-index: 999999;">
 
@@ -784,57 +809,57 @@
             </div>
 
             <div class="collapse navbar-collapse" id="secondaryNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="navbar-navigation-button" href="./index.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnHome"
-                                    onclick="onClickTamEng(this.id)">Home</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./about_us.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
-                                    onclick="onClickTamEng(this.id)">About Us</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./council.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnCouncil"
-                                    onclick="onClickTamEng(this.id)">Council</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./workwithus.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
-                                    onclick="onClickTamEng(this.id)">Work With Us</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./events.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnEvents"
-                                    onclick="onClickTamEng(this.id)">Events</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./projects.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnProjects"
-                                    onclick="onClickTamEng(this.id)">Projects</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./faq.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnFAQ"
-                                    onclick="onClickTamEng(this.id)">FAQ</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./contact_us.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnContactUs"
-                                    onclick="onClickTamEng(this.id)">Contact Us</button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="navbar-navigation-button" href="./index.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnHome"
+                                onclick="onClickTamEng(this.id)">Home</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./about_us.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
+                                onclick="onClickTamEng(this.id)">About Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./council.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnCouncil"
+                                onclick="onClickTamEng(this.id)">Council</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./workwithus.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
+                                onclick="onClickTamEng(this.id)">Work With Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./events.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnEvents"
+                                onclick="onClickTamEng(this.id)">Events</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./projects.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnProjects"
+                                onclick="onClickTamEng(this.id)">Projects</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./faq.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnFAQ"
+                                onclick="onClickTamEng(this.id)">FAQ</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./contact_us.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnContactUs"
+                                onclick="onClickTamEng(this.id)">Contact Us</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
@@ -845,39 +870,31 @@
     <!-- Main Content Start -->
     <div class="container" id="google_translate_element" style="margin-top:200px;">
         <div class="row">
-            <div class="col-sm-12" style="text-align: center;">
-                <h2 style="font-size: 45px; color:#004578">About Us</h2>
+            <div class="col-sm-12 englishMainHeader" style="text-align: center;">
+                <h2 id="hMainHeader" style="font-size: 45px; color:#004578"></h2>
             </div>
+
+
             <div class="col-sm-4 backgroud-about-us-ripon-building" style="margin-top:10px;">
                 <h2 style="color:#DF7870; font-size: 40px">
-                    <p>Innovate. </p>
-                    <p></p>Sustain. </p>
-                    <p></p>Enable.</p>
+                    <p id="pSubHeader_1"></p>
+                    <p id="pSubHeader_2"></p>
+                    <p id="pSubHeader_3"></p>
                 </h2>
 
             </div>
             <div class="col-sm-8" style="margin-bottom: 5px">
-                <p style="font-size: 16px; color:#004578">
-                    C-Hub (Chennai-Hub) is the first of its kind innovation Hub set up by the Greater Chennai
-                    Corporation. This is an attempt to foster and promote innovation across different verticals. It
-                    harps on the need for Academia, Industries and GCC to work together to encourage good and innovative
-                    ideas.
+                <p id="pfirst_row_paragraph_1" style="font-size: 16px; color:#004578">
+                   
                 </p>
-                <p style="font-size: 16px; color:#004578">
-                    A multidisciplinary team will be put together in order to approach problems through a holistic lens.
-                    The innovation hub will host stakeholders from different verticals to be part of this platform. It
-                    is an inclusive platform which will attempt to solve social, environmental and urban problems in the
-                    city together with its citizens.
+                <p id="pfirst_row_paragraph_2" style="font-size: 16px; color:#004578">
+                   
                 </p>
-                <p style="font-size: 16px; color:#004578">
-                    A new paradigm is required that essentially brings urban stakeholders to collectively provide the
-                    know-how to urban challenges ensuring their expertise and perspective is reflected in urban
-                    solutioning for the future. A coming together of these critical stakeholders, termed as the
-                    Quadruple Helix, can aid in active flow of ideas and information to create both value and reduce
-                    risks, in essence, creating an ‘innovation value-network’ that spills benefits across the urban
-                    ecosystem gearing our cities for the future.
+                <p id="pfirst_row_paragraph_3" style="font-size: 16px; color:#004578">
+                   
                 </p>
             </div>
+
             <div class="col-sm-12" style="text-align: center; color: #004578;">
                 <h2 style="font-size: 32px;">Core Functions</h2>
                 <div class="row" style="text-align: center; margin-bottom: 5px">
@@ -901,7 +918,8 @@
                     <img src="./asserts/images/core_functions-image3.png" style="width: 302px">
                 </div>
             </div>
-            <div class="col-sm-12" style="background-color: #FFF8F8; height:100%; margin-top: 15px; text-align: center;">
+            <div class="col-sm-12"
+                style="background-color: #FFF8F8; height:100%; margin-top: 15px; text-align: center;">
                 <div style="text-align: center">
                     <h2 style="color: #004578; font-size:40px">Team</h2>
                     <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
@@ -1020,26 +1038,33 @@
                 <div class="row" style="text-align: center; margin-bottom: 5px">
                     <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
                 </div>
-                <div class="col-sm-12" style="text-align: center;">
+                <div class="col-sm-12" style="text-align: center; margin-bottom: 30px;">
                     <div class="col-sm-2">
-                            
+
                     </div>
                     <div class="col-sm-8">
-                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
-                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
-                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                        <img src="./asserts/images/about_us/about_us_1_Collaboration.png"
+                            style="width: 180px; height: 175px;">
+                        <img src="./asserts/images/about_us/about_us_2_Fairness.png"
+                            style="width: 180px; height: 175px;">
+                        <img src="./asserts/images/about_us/about_us_3_Learning.png"
+                            style="width: 180px; height: 175px;">
                     </div>
                     <div class="col-sm-2">
                     </div>
                 </div>
-                <div class="col-sm-12"  style="text-align: center;">
+                <div class="col-sm-12" style="text-align: center;">
                     <div class="col-sm-1">
                     </div>
-                    <div class="col-sm-10">
-                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
-                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
-                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
-                            <img src="./asserts/images/about_us_values-img1.png" style="width: 180px; height: 175px;">
+                    <div class="col-sm-10" style=" margin-bottom: 30px;">
+                        <img src="./asserts/images/about_us/about_us_4_Openness.png"
+                            style="width: 180px; height: 175px;">
+                        <img src="./asserts/images/about_us/about_us_5_Excellence.png"
+                            style="width: 180px; height: 175px;">
+                        <img src="./asserts/images/about_us/about_us_6_Efficient.png"
+                            style="width: 180px; height: 175px;">
+                        <img src="./asserts/images/about_us/about_us_7_Challenge_QUO.png"
+                            style="width: 180px; height: 175px;">
                     </div>
                     <div class="col-sm-1">
                     </div>
@@ -1048,7 +1073,7 @@
         </div>
     </div>
     <!-- Main Content End -->
-    
+
     <footer class="page-footer font-small pink pt-4">
         <div class="row" style="margin: 0">
             <div class="col-md-6 mt-md-0 mt-3 footer-column-section">
