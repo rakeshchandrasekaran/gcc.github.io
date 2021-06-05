@@ -23,6 +23,8 @@
     <!-- or the reference on CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
+    <script type="text/javascript" src="./data/secondaryNavBar.js"></script>
+    <script type="text/javascript" src="./js/translations.js"></script>
 
     <style>
         .hub-logo {
@@ -652,6 +654,7 @@
             if (!executed) {
                 executed = true;
                 loadContentData("english");
+                loadSecondaryNavBar("english");
             }
             document.getElementById("btnAboutUs").style.color = "#DF7870";
             document.getElementById("btnAboutUs").style.background = "rgba(220, 116, 113, 0.12)";
@@ -662,12 +665,14 @@
                 document.getElementById("btnEnglish").style.background = '#1F4A6B';
                 document.getElementById("btnEnglish").style.color = '#ffffff';
                 loadContentData("english");
+                loadSecondaryNavBar("english");
             }
             if (clicked_id == "btnTamil") {
                 document.getElementById("btnTamil").style.background = "#1F4A6B";
                 document.getElementById("btnEnglish").style.background = '#01243F';
                 document.getElementById("btnTamil").style.color = '#ffffff';
                 loadContentData("tamil");
+                loadSecondaryNavBar("tamil");
             }
         }
         var loadContentData = (function () {
@@ -675,6 +680,7 @@
                     var stringyfy = JSON.stringify(about_us)
                     var jsonObject = JSON.parse(stringyfy);
                     if(language === "english"){
+                        
                         document.getElementById("hMainHeader").innerHTML = jsonObject.english.about_us.first_row_header;
 
                         document.getElementById("pfirst_row_paragraph_1").innerHTML = jsonObject.english.about_us.first_row_paragraph[0];
@@ -813,7 +819,7 @@
                     <li>
                         <a class="navbar-navigation-button" href="./index.html">
                             <button type="button" class="btn btn-cs-secban" id="btnHome"
-                                onclick="onClickTamEng(this.id)">Home</button>
+                                onclick="onClickTamEng(this.id)"></button>
                         </a>
                     </li>
                     <li>

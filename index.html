@@ -7,25 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>GCC C-HUB</title>
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-
-    <!-- Optional theme -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"> -->
-
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
-
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -42,7 +23,8 @@
     <!-- or the reference on CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-
+    <script type="text/javascript" src="./data/secondaryNavBar.js"></script>
+    <script type="text/javascript" src="./js/translations.js"></script>
     <style>
         .hub-logo {
             height: 30px;
@@ -599,6 +581,7 @@
                 display: none;
             }
         }
+
         @media screen and (min-width: 800px) {
             #divCarausalMobile {
                 visibility: visible;
@@ -609,11 +592,14 @@
                 display: none;
             }
         }
-        
-
     </style>
     <script>
         function bodyOnload() {
+            var executed = false;
+            if (!executed) {
+                executed = true;
+                loadSecondaryNavBar("english");
+            }
             document.getElementById("btnHome").style.color = "#DF7870";
             document.getElementById("btnHome").style.background = "rgba(220, 116, 113, 0.12)";
         }
@@ -622,11 +608,13 @@
                 document.getElementById("btnTamil").style.background = "#01243F";
                 document.getElementById("btnEnglish").style.background = '#1F4A6B';
                 document.getElementById("btnEnglish").style.color = '#ffffff';
+                loadSecondaryNavBar("english");
             }
             if (clicked_id == "btnTamil") {
                 document.getElementById("btnTamil").style.background = "#1F4A6B";
                 document.getElementById("btnEnglish").style.background = '#01243F';
                 document.getElementById("btnTamil").style.color = '#ffffff';
+                loadSecondaryNavBar("tamil");
             }
         }
     </script>
@@ -744,7 +732,7 @@
                     <li>
                         <a class="navbar-navigation-button" href="./index.html">
                             <button type="button" class="btn btn-cs-secban" id="btnHome"
-                                onclick="onClickTamEng(this.id)">Home</button>
+                                onclick="onClickTamEng(this.id)"></button>
                         </a>
                     </li>
                     <li>
@@ -849,45 +837,45 @@
         </div>
 
     </div>
-    <div class="col-xs-12 col-sm-12 backgroud-banners2" id="divCarausalMobile" >
-            <div class="main-caption2-heading" style="text-align: center;
+    <div class="col-xs-12 col-sm-12 backgroud-banners2" id="divCarausalMobile">
+        <div class="main-caption2-heading" style="text-align: center;
             color: #004578; height: 100%;">
-                <h1 style="font-size: 55px">Current Events</h1>
-                <div class="carousal">
-                    <div class="splide" id="splidemobile" style="visibility: hidden">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
-                                        class="carousal-img-css">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
-                                        class="carousal-img-css">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
-                                        class="carousal-img-css">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
-                                        class="carousal-img-css">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
-                                        class="carousal-img-css">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
-                                        class="carousal-img-css">
-                                </li>
-                            </ul>
-                        </div>
+            <h1 style="font-size: 55px">Current Events</h1>
+            <div class="carousal">
+                <div class="splide" id="splidemobile" style="visibility: hidden">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image1.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image2.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./asserts/images/current_event_image3.png" style="width: 100%; height:100%"
+                                    class="carousal-img-css">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-    
         </div>
+
+    </div>
     <div class="col-xs-12 col-sm-12 backgroud-banners3">
         <div class="col-xs-12 col-sm-12">
             <h1 style="font-size: 45px; color: #004578; text-align: center;">Changemaker’s Program</h1>

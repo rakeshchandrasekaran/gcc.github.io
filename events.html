@@ -7,25 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>GCC C-HUB</title>
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-
-    <!-- Optional theme -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"> -->
-
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
-
+   
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -42,6 +24,9 @@
     <!-- or the reference on CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
+
+    <script type="text/javascript" src="./data/secondaryNavBar.js"></script>
+    <script type="text/javascript" src="./js/translations.js"></script>
 
     <style>
         .hub-logo {
@@ -660,6 +645,11 @@
     <script>
 
         function bodyOnload() {
+            var executed = false;
+            if (!executed) {
+                executed = true;
+                loadSecondaryNavBar("english");
+            }
             document.getElementById("btnEvents").style.color = "#DF7870";
             document.getElementById("btnEvents").style.background = "rgba(220, 116, 113, 0.12)";
         }
@@ -668,11 +658,13 @@
                 document.getElementById("btnTamil").style.background = "#01243F";
                 document.getElementById("btnEnglish").style.background = '#1F4A6B';
                 document.getElementById("btnEnglish").style.color = '#ffffff';
+                loadSecondaryNavBar("english");
             }
             if (clicked_id == "btnTamil") {
                 document.getElementById("btnTamil").style.background = "#1F4A6B";
                 document.getElementById("btnEnglish").style.background = '#01243F';
                 document.getElementById("btnTamil").style.color = '#ffffff';
+                loadSecondaryNavBar("tamil");
             }
         }
     </script>
