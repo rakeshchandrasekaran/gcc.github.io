@@ -647,13 +647,14 @@
     </script>
 
     <script type="text/javascript" src="./data/about_us.js"></script>
+    <script type="text/javascript" src="./js/translation/about_us.js"></script>
     <script>
 
         function bodyOnload() {
             var executed = false;
             if (!executed) {
                 executed = true;
-                loadContentData("english");
+                loadDataAboutUs("english");
                 loadSecondaryNavBar("english");
             }
             document.getElementById("btnAboutUs").style.color = "#DF7870";
@@ -664,48 +665,18 @@
                 document.getElementById("btnTamil").style.background = "#01243F";
                 document.getElementById("btnEnglish").style.background = '#1F4A6B';
                 document.getElementById("btnEnglish").style.color = '#ffffff';
-                loadContentData("english");
+                loadDataAboutUs("english");
                 loadSecondaryNavBar("english");
             }
             if (clicked_id == "btnTamil") {
                 document.getElementById("btnTamil").style.background = "#1F4A6B";
                 document.getElementById("btnEnglish").style.background = '#01243F';
                 document.getElementById("btnTamil").style.color = '#ffffff';
-                loadContentData("tamil");
+                loadDataAboutUs("tamil");
                 loadSecondaryNavBar("tamil");
             }
         }
-        var loadContentData = (function () {
-            return function (language) {
-                    var stringyfy = JSON.stringify(about_us)
-                    var jsonObject = JSON.parse(stringyfy);
-                    if(language === "english"){
-                        
-                        document.getElementById("hMainHeader").innerHTML = jsonObject.english.about_us.first_row_header;
 
-                        document.getElementById("pfirst_row_paragraph_1").innerHTML = jsonObject.english.about_us.first_row_paragraph[0];
-                        document.getElementById("pfirst_row_paragraph_2").innerHTML = jsonObject.english.about_us.first_row_paragraph[1];
-                        document.getElementById("pfirst_row_paragraph_3").innerHTML = jsonObject.english.about_us.first_row_paragraph[2];
-                        
-                        document.getElementById("pSubHeader_1").innerHTML = jsonObject.english.about_us.first_row_sub_header[0];
-                        document.getElementById("pSubHeader_2").innerHTML = jsonObject.english.about_us.first_row_sub_header[1];
-                        document.getElementById("pSubHeader_3").innerHTML = jsonObject.english.about_us.first_row_sub_header[2];
-                        
-                    } else if(language === "tamil")
-                    {
-                        document.getElementById("hMainHeader").innerHTML = jsonObject.tamil.about_us.first_row_header;
-
-                        document.getElementById("pfirst_row_paragraph_1").innerHTML = jsonObject.tamil.about_us.first_row_paragraph[0];
-                        document.getElementById("pfirst_row_paragraph_2").innerHTML = jsonObject.tamil.about_us.first_row_paragraph[1];
-                        document.getElementById("pfirst_row_paragraph_3").innerHTML = jsonObject.tamil.about_us.first_row_paragraph[2];
-
-                        document.getElementById("pSubHeader_1").innerHTML = jsonObject.tamil.about_us.first_row_sub_header[0];
-                        document.getElementById("pSubHeader_2").innerHTML = jsonObject.tamil.about_us.first_row_sub_header[1];
-                        document.getElementById("pSubHeader_3").innerHTML = jsonObject.tamil.about_us.first_row_sub_header[2];
-                    }
-                    
-            };
-        })();
     </script>
 </head>
 
@@ -879,8 +850,6 @@
             <div class="col-sm-12 englishMainHeader" style="text-align: center;">
                 <h2 id="hMainHeader" style="font-size: 45px; color:#004578"></h2>
             </div>
-
-
             <div class="col-sm-4 backgroud-about-us-ripon-building" style="margin-top:10px;">
                 <h2 style="color:#DF7870; font-size: 40px">
                     <p id="pSubHeader_1"></p>
@@ -891,43 +860,54 @@
             </div>
             <div class="col-sm-8" style="margin-bottom: 5px">
                 <p id="pfirst_row_paragraph_1" style="font-size: 16px; color:#004578">
-                   
+
                 </p>
                 <p id="pfirst_row_paragraph_2" style="font-size: 16px; color:#004578">
-                   
+
                 </p>
                 <p id="pfirst_row_paragraph_3" style="font-size: 16px; color:#004578">
-                   
+
                 </p>
             </div>
 
             <div class="col-sm-12" style="text-align: center; color: #004578;">
-                <h2 style="font-size: 32px;">Core Functions</h2>
+                <h2 id="hSecondRowHeader" alt="Coore Functions" style="font-size: 32px;"></h2>
                 <div class="row" style="text-align: center; margin-bottom: 5px">
                     <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
-                </div>
-                <div class="col-sm-4" style="text-align: left; font-size: 20px">
-                    <!-- <span>
-                        <img src="./asserts/images/blue_tick.png" style="width: 33px; height:33px"></span>
                     
-                    <span>Enable and sustain the discovery and deployment of innovation to tackle urban challenges</span> -->
-                    <img src="./asserts/images/core_functions-image1.png" style="width: 302px">
                 </div>
                 <div class="col-sm-4" style="text-align: left; font-size: 20px">
-                    <!-- <p>
-                        Increasing economic growth
-                    </p> -->
-                    <img src="./asserts/images/core_functions-image2.png" style="width: 302px">
+                    <div class="col-sm-2">
+                            <img src="./asserts/images/about_us/tick.png" style="width: 33px; height: 33px;">
+                        </div>
+                        <div class="col-sm-10">
+                            <p id="hSecondRowData0" style="color: #004578; font-size:20px;">
+                            </p>
+                        </div>
                 </div>
                 <div class="col-sm-4" style="text-align: left; font-size: 20px">
-                    <!-- Enhance quality of life and ensure sustainability in processes -->
-                    <img src="./asserts/images/core_functions-image3.png" style="width: 302px">
+                        <div class="col-sm-2">
+                                <img src="./asserts/images/about_us/tick.png" style="width: 33px; height: 33px;">
+                            </div>
+                            <div class="col-sm-10">
+                                <p id="hSecondRowData1" style="color: #004578; font-size:20px;">
+                                </p>
+                            </div>
+                </div>
+                <div class="col-sm-4" style="text-align: left; font-size: 20px">
+                        <div class="col-sm-2">
+                                <img src="./asserts/images/about_us/tick.png" style="width: 33px; height: 33px;">
+                            </div>
+                            <div class="col-sm-10">
+                                <p id="hSecondRowData2" style="color: #004578; font-size:20px;">
+                                </p>
+                            </div>
                 </div>
             </div>
             <div class="col-sm-12"
                 style="background-color: #FFF8F8; height:100%; margin-top: 15px; text-align: center;">
                 <div style="text-align: center">
-                    <h2 style="color: #004578; font-size:40px">Team</h2>
+                    <h2 id="hThirdRowHeader" style="color: #004578; font-size:40px">Team</h2>
                     <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
                 </div>
                 <div class="col-sm-12">
@@ -948,8 +928,8 @@
             </div>
 
             <div class="col-sm-12" style="background-color: #FFFFFF; color: #004578; height:100%; margin-top: 15px">
-                <h2 style="text-align: center; font-size: 40px">
-                    Mission
+                <h2 id="hFourthRowHeader" style="text-align: center; font-size: 40px">
+                    
                 </h2>
                 <div class="row" style="text-align: center; margin-bottom: 5px">
                     <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
@@ -960,8 +940,7 @@
                             <img src="./asserts/images/about_us_mission-img1.png" style="width: 56px; height: 54.67px;">
                         </div>
                         <div class="col-sm-9">
-                            <p style="font-size: 16px">
-                                A cross-boundary collaborative regime instituted to decide on innovation pathways.
+                            <p id="hFourthRowData0" style="font-size: 16px">
                             </p>
                         </div>
                     </div>
@@ -970,9 +949,7 @@
                             <img src="./asserts/images/about_us_mission-img2.png" style="width: 56px; height: 54.67px;">
                         </div>
                         <div class="col-sm-9">
-                            <p style="font-size: 16px">
-                                Building partnerships between the quadruple helix (QH) of stakeholders into an ecosystem
-                                for know-how solutioning.
+                            <p id="hFourthRowData1" style="font-size: 16px">
                             </p>
                         </div>
                     </div>
@@ -982,7 +959,7 @@
 
             <div class="col-sm-12" style="background-color: #FFFFFF; color: #004578; height:100%; margin-top: 15px;
             margin-bottom: 25px;text-align: center;">
-                <h2 style="text-align: center; font-size: 40px">
+                <h2 id="hFifthRowHeader" style="text-align: center; font-size: 40px">
                     Vision
                 </h2>
                 <div class="row" style="text-align: center; margin-bottom: 5px">
@@ -994,8 +971,7 @@
                             <img src="./asserts/images/about_us_vision-img1.png" style="width: 56px; height: 54.67px;">
                         </div>
                         <div class="col-sm-9">
-                            <p style="font-size: 16px">
-                                To become the largest think tank in the Country in the next three years.
+                            <p id="pFifthRowData0" style="font-size: 16px">
                             </p>
                         </div>
                     </div>
@@ -1004,8 +980,7 @@
                             <img src="./asserts/images/about_us_vision-img2.png" style="width: 56px; height: 54.67px;">
                         </div>
                         <div class="col-sm-9">
-                            <p style="font-size: 16px">
-                                To successfully establish Proof of concept by piloting in Chennai.
+                            <p id="pFifthRowData1" style="font-size: 16px">
                             </p>
                         </div>
                     </div>
@@ -1017,8 +992,7 @@
                             <img src="./asserts/images/about_us_vision-img3.png" style="width: 56px; height: 54.67px;">
                         </div>
                         <div class="col-sm-9">
-                            <p style="font-size: 16px">
-                                To create a working template that can be adapted by other cities in Tamil Nadu.
+                                <p id="pFifthRowData2" style="font-size: 16px">
                             </p>
                         </div>
                     </div>
@@ -1027,10 +1001,8 @@
                             <img src="./asserts/images/about_us_vision-img4.png" style="width: 56px; height: 54.67px;">
                         </div>
                         <div class="col-sm-9">
-                            <p style="font-size: 16px">
-                                To be a platform for intersectionality of academics, entrepreneurship and the Chennai
-                                Corporation.
-                            </p>
+                                <p id="pFifthRowData3" style="font-size: 16px">
+                                    </p>
                         </div>
                     </div>
                 </div>
@@ -1038,8 +1010,7 @@
 
             <div class="col-sm-12" style="background-color: #F2FBFF; color: #004578; height:100%; margin-top: 15px;
             margin-bottom: 25px;">
-                <h2 style="text-align: center; font-size: 40px">
-                    Values
+                <h2 id="hSixthRowHeader" style="text-align: center; font-size: 40px">
                 </h2>
                 <div class="row" style="text-align: center; margin-bottom: 5px">
                     <img src="./asserts/images/Vector_Core-Functions.png" style="width: 72.5px; height: 4px;">
