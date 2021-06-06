@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>GCC C-HUB</title>
-   
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -26,6 +26,8 @@
 
     <script type="text/javascript" src="./data/secondaryNavBar.js"></script>
     <script type="text/javascript" src="./js/translation/header.js"></script>
+
+    <script type="text/javascript" src="./data/faq.js"></script>
 
     <style>
         .hub-logo {
@@ -218,7 +220,7 @@
 
         /* Faq Section *********************************** */
 
-        .expandable-tile{
+        .expandable-tile {
             width: 524px;
             margin: 16px 17px 0 17px;
 
@@ -228,7 +230,7 @@
             border-radius: 5px;
         }
 
-        .collapsible { 
+        .collapsible {
             background: white;
             cursor: pointer;
             width: 100%;
@@ -255,7 +257,8 @@
             margin-left: auto;
         }
 
-        .active, .collapsible:hover {
+        .active,
+        .collapsible:hover {
             color: #004578;
             font-weight: 600;
         }
@@ -275,6 +278,12 @@
 
 
         #faqSection {
+            margin-top: 46px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #faqSectionTamil {
             margin-top: 46px;
             display: flex;
             flex-wrap: wrap;
@@ -300,11 +309,12 @@
             min-width: 524px;
         }
 
-        .tile-opened .collapsible-symbol-plus, .collapsible-symbol-minus{
+        .tile-opened .collapsible-symbol-plus,
+        .collapsible-symbol-minus {
             display: none;
         }
 
-        .tile-opened .collapsible-symbol-minus{
+        .tile-opened .collapsible-symbol-minus {
             display: block;
         }
 
@@ -378,7 +388,8 @@
                 justify-content: flex-start;
             }
 
-            .expandable-tile, .faq-split{
+            .expandable-tile,
+            .faq-split {
                 min-width: unset;
                 width: unset;
                 max-width: 524px;
@@ -566,7 +577,7 @@
             padding: 0;
         }
 
-        .backgroud-banners{
+        .backgroud-banners {
             position: relative;
             /* opacity: 0.65; */
             background-attachment: fixed;
@@ -590,7 +601,6 @@
             /* background: rgba(220, 116, 113, 0.12); */
             color: #DC7471;
         }
-
     </style>
     <script>
         function bodyOnload() {
@@ -600,20 +610,25 @@
                 loadSecondaryNavBar("english");
             }
             document.getElementById("btnFAQ").style.color = "#DF7870";
-                document.getElementById("btnFAQ").style.background = "rgba(220, 116, 113, 0.12)";
-            }
+            document.getElementById("btnFAQ").style.background = "rgba(220, 116, 113, 0.12)";
+        }
         function onClickTamEng(clicked_id) {
             if (clicked_id == "btnEnglish") {
                 document.getElementById("btnTamil").style.background = "#01243F";
                 document.getElementById("btnEnglish").style.background = '#1F4A6B';
                 document.getElementById("btnEnglish").style.color = '#ffffff';
                 loadSecondaryNavBar("english");
+                document.getElementById("faqSectionTamil").style.display = "none";
+                document.getElementById("faqSection").style.display = "block";
+
             }
             if (clicked_id == "btnTamil") {
                 document.getElementById("btnTamil").style.background = "#1F4A6B";
                 document.getElementById("btnEnglish").style.background = '#01243F';
                 document.getElementById("btnTamil").style.color = '#ffffff';
                 loadSecondaryNavBar("tamil");
+                document.getElementById("faqSectionTamil").style.display = "block";
+                document.getElementById("faqSection").style.display = "none";
             }
         }
     </script>
@@ -652,7 +667,7 @@
                     <li>
                         <a class="navbar-language-button">
                             <button type="button" class="btn btn-cs" id="btnMediumFont"
-                                style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)" >A</button>
+                                style="font-size: 16px; padding: 6px 5px;" onclick="onClickTamEng(this.id)">A</button>
                         </a>
                     </li>
                     <li>
@@ -684,22 +699,26 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com" target="_blank" style="padding-left: 5px; padding-right: 5px;">
+                        <a href="https://www.facebook.com" target="_blank"
+                            style="padding-left: 5px; padding-right: 5px;">
                             <img src="asserts/images/facebook-icon.png">
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.twitter.com" target="_blank" style="padding-left: 5px; padding-right: 5px;">
+                        <a href="https://www.twitter.com" target="_blank"
+                            style="padding-left: 5px; padding-right: 5px;">
                             <img src="asserts/images/twitter.png">
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com" target="_blank" style="padding-left: 5px; padding-right: 5px;">
+                        <a href="https://www.instagram.com" target="_blank"
+                            style="padding-left: 5px; padding-right: 5px;">
                             <img src="asserts/images/instagram.png">
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com" target="_blank" style="padding-left: 5px; padding-right: 5px;">
+                        <a href="https://www.youtube.com" target="_blank"
+                            style="padding-left: 5px; padding-right: 5px;">
                             <img src="asserts/images/youtube.png">
 
                         </a>
@@ -723,74 +742,78 @@
             </div>
 
             <div class="collapse navbar-collapse" id="secondaryNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="navbar-navigation-button" href="./index.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnHome"
-                                    onclick="onClickTamEng(this.id)">Home</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./about_us.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
-                                    onclick="onClickTamEng(this.id)">About Us</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./council.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnCouncil"
-                                    onclick="onClickTamEng(this.id)">Council</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./workwithus.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
-                                    onclick="onClickTamEng(this.id)">Work With Us</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./events.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnEvents"
-                                    onclick="onClickTamEng(this.id)">Events</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./projects.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnProjects"
-                                    onclick="onClickTamEng(this.id)">Projects</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./faq.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnFAQ"
-                                    onclick="onClickTamEng(this.id)">FAQ</button>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="navbar-navigation-button" href="./contact_us.html">
-                                <button type="button" class="btn btn-cs-secban" id="btnContactUs"
-                                    onclick="onClickTamEng(this.id)">Contact Us</button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="navbar-navigation-button" href="./index.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnHome"
+                                onclick="onClickTamEng(this.id)">Home</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./about_us.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnAboutUs"
+                                onclick="onClickTamEng(this.id)">About Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./council.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnCouncil"
+                                onclick="onClickTamEng(this.id)">Council</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./workwithus.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnWorkWithUs"
+                                onclick="onClickTamEng(this.id)">Work With Us</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./events.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnEvents"
+                                onclick="onClickTamEng(this.id)">Events</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./projects.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnProjects"
+                                onclick="onClickTamEng(this.id)">Projects</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./faq.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnFAQ"
+                                onclick="onClickTamEng(this.id)">FAQ</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-navigation-button" href="./contact_us.html">
+                            <button type="button" class="btn btn-cs-secban" id="btnContactUs"
+                                onclick="onClickTamEng(this.id)">Contact Us</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li class="active">FAQ</li>
-            </ol>
+            <li><a href="#">Home</a></li>
+            <li class="active">FAQ</li>
+        </ol>
     </div>
-   
+
     <div class="backgroud-banners">
         <div class="caption">
             <h1>Frequently Asked Questions</h1>
             <div class="hr-line"></div>
         </div>
     </div>
-    
-    <div id="faqSection"> 
+
+    <div id="faqSection">
         <div class="faq-split" id="faqSplit1"></div>
         <div class="faq-split" id="faqSplit2"></div>
+    </div>
+    <div id="faqSectionTamil">
+        <div class="faq-split" id="faqSplit1Tamil"></div>
+        <div class="faq-split" id="faqSplit2Tamil"></div>
     </div>
 
     <div class="more-faq-section">
@@ -820,150 +843,19 @@
         </div>
     </footer>
 
-    <script> 
+    <script>
+        let faqSplit1Content = '';
+        let faqSplit2Content = '';
 
-let faqSplit1QuestionsAndAnswers = [
-    {
-        question: 'What can we offer ?' ,
-        answer: 'Chennai Innovation Hub offers various opportunities like',
-        answerPoints: [
-            'Platform to pitch and mentor your idea.',
-            'Enable real time data sharing.',
-            'Provide existing society to work and implement the project.',
-            'Partnerships and outreach for ecosystem enablement.',
-            'Capacity enhancement and knowledge services.',
-            'Change management and thought leadership.',
-            'Advisory on innovation specialisation & responsive regulation for different verticals.',
-            'City will act as a living laboratory to build POC.'
-        ],
-        readMore: 'google.com'
-    },
-    {
-        question: 'Who are we?' ,
-        // answer: 'Chennai Innovation Hub offers various opportunities like',
-        answerPoints: [
-            'We are innovation enablers, accelerators for new ideas/start-ups and enhance incubation who are focussed to solve real world problems through a holistic cross disciplinary approach.'
-        ],
-    },
-    {
-        question: 'Why c-hub?' ,
-        // answer: 'Chennai Innovation Hub offers various opportunities like',
-        answerPoints: [
-            'As a part of the greater chennai corporation we have access to the real time data. If the project aligns with the corporation, it can even absorb it to make it a chennai corporation entity. Our council of advisory bodies consists of world leaders in every field. We support and collaborate and aid any individual determined to solve a societal problem to ensure a win-win situation. We provide a networking platform to pitch. Also, C-Hub can build & test proof of concept and connect you with potential incubators and investors.'
-        ],
-    },
-    {
-        question: 'Why do I need to be part of this?' ,
-        // answer: 'Chennai Innovation Hub offers various opportunities like',
-        answerPoints: [
-            'Being part of the c-hub enables you to deal with problems at the grassroot level. Besides, it helps you to make a difference in society with infrastructure, dataset, office access.'
-        ],
-    },
-    {
-        question: 'How can I be a part of this?' ,
-        // answer: 'Chennai Innovation Hub offers various  like',
-        answer:'As a student you can be an intern at the C-Hub. If you’re a PhD scholar working in solving the corporation problem to impact people, you can collaborate with GCC to get access and data for accurate analysis. As a startup founder, C-hub provides a platform to pilot your project, build PoC and connect you with potential incubators and investors. As a subject matter expert, you can work hand in hand with dignitaries as a pillar of support to the corporation to solve and achieve sustainable development goals.'
-    },
-    {
-        question: 'Can I intern part-time /remotely?',
-        answer:'No, this is not in place yet.',
-    },
-    {
-        question: 'I’m a part of an educational institution. How can we contribute?',
-        answer:'We are open to collaboration with young minds. Please mail us at chub.gcc@gmail.com to know more.',
-    },
-    {
-        question:'How will the educational institution benefit?',
-        answer:'We will sign a MoU with the institutions that may lead to future collaborations and research works.',
-    }
-];
+        let faqSplit1TamilContent = '';
+        let faqSplit2TamilContent = '';
 
-let faqSplit2QuestionsAndAnswers = [
-    {
-        question: 'Will I get a certificate post completion of my internship or workshop or project?' ,
-        answer: 'Yes, you definitely would get a certificate.',
-        // answerPoints: [
-        //     'Platform to pitch and mentor your idea.',
-        //     'Enable real time data sharing.',
-        //     'Provide existing society to work and implement the project.',
-        //     'Partnerships and outreach for ecosystem enablement.',
-        //     'Capacity enhancement and knowledge services.',
-        //     'Change management and thought leadership.',
-        //     'Advisory on innovation specialisation & responsive regulation for different verticals.',
-        //     'City will act as a living laboratory to build POC.'
-        // ],
-    },
-    {
-        question: 'How can I get funding from the GCC?' ,
-        answer: 'Funding is decided on a case by case basis at the discretion of the GCC and advisory council. If the student or professional is working on problems that the corporation is focussing on, the GCC will consider funding and collaboration. Please mail chub.gcc@gmail.com for further details.',
-        // answerPoints: [
-        //     'Platform to pitch and mentor your idea.',
-        //     'Enable real time data sharing.',
-        //     'Provide existing society to work and implement the project.',
-        //     'Partnerships and outreach for ecosystem enablement.',
-        //     'Capacity enhancement and knowledge services.',
-        //     'Change management and thought leadership.',
-        //     'Advisory on innovation specialisation & responsive regulation for different verticals.',
-        //     'City will act as a living laboratory to build POC.'
-        // ],
-    },
-    {
-        question: 'Who is a part of the advisory council?' ,
-        answer: 'Advisory council consists of professionals and experts from various fields. For eg the technical advisory council consists of market leaders of subject matter expert from the technology space who would carry decades of experience.',
-        // answerPoints: [
-        //     'Platform to pitch and mentor your idea.',
-        //     'Enable real time data sharing.',
-        //     'Provide existing society to work and implement the project.',
-        //     'Partnerships and outreach for ecosystem enablement.',
-        //     'Capacity enhancement and knowledge services.',
-        //     'Change management and thought leadership.',
-        //     'Advisory on innovation specialisation & responsive regulation for different verticals.',
-        //     'City will act as a living laboratory to build POC.'
-        // ],
-    },
-    {
-        question: 'Can I be a part of the advisory council?' ,
-        answer: 'Yes. We request you to send your resume and an interest statement (500 words max) on why you should be selected to chub.gcc@gmail.com. It will be carefully reviewed by our expert committee before intimating you about the decision. The council is on pro bono basis.',
-        // answerPoints: [
-        //     'Platform to pitch and mentor your idea.',
-        //     'Enable real time data sharing.',
-        //     'Provide existing society to work and implement the project.',
-        //     'Partnerships and outreach for ecosystem enablement.',
-        //     'Capacity enhancement and knowledge services.',
-        //     'Change management and thought leadership.',
-        //     'Advisory on innovation specialisation & responsive regulation for different verticals.',
-        //     'City will act as a living laboratory to build POC.'
-        // ],
-        readMore: 'google.com'
+        faqSplit1QuestionsAndAnswers.forEach((value) => {
+            let answerPoints = '';
+            value['answerPoints'] && value['answerPoints'].map((point) => { answerPoints += `<li>${point}</li>`; })
+            let readmoreContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
 
-    },
-    {
-        question: 'I’m a working professional. Can I still be a part of the advisory council?' ,
-        answer: 'Yes you can. In fact, we require 3hours per month of your time and expertise for our projects on a pro bono basis.',
-    },
-    {
-        question:'What is the minimum qualification to be a part of the C-hub?',
-        answer:'There is absolutely no minimum qualification. Are you someone who looks to challenge the status quo? If yes, we need you.',
-    },
-    {
-        question:'I haven’t been a part of innovation but want to gain exposure.',
-        answer:'We are a group of like minded individuals from different verticals looking to redefine the world. You can be a part of the workshops, events, hackathons and career fairs. For further information mail us chub.gcc@gmail.com.',
-    },
-    {
-        question:'Where are you located?',
-        answer:'We are located on the second floor of Ripon Building, Greater Chennai Corporation.',
-    }
-];
-
-let faqSplit1Content = '';
-let faqSplit2Content = '';
-
-faqSplit1QuestionsAndAnswers.forEach((value) => {
-    let answerPoints = '';
-    value['answerPoints'] && value['answerPoints'].map((point) => {answerPoints += `<li>${point}</li>`;})
-    let readmoreContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
-
-    faqSplit1Content += `            
+            faqSplit1Content += `            
             <div class="expandable-tile">
                 <button class="collapsible">
                     <div style="font-size: 42px; color: #2B88D8;">•</div>
@@ -981,16 +873,16 @@ faqSplit1QuestionsAndAnswers.forEach((value) => {
                     </div>
                 </div>
             </div>`;
-});
+        });
 
-$('#faqSplit1').append(faqSplit1Content);
+        $('#faqSplit1').append(faqSplit1Content);
 
-faqSplit2QuestionsAndAnswers.forEach((value) => {
-    let answerPoints = '';
-    value['answerPoints'] && value['answerPoints'].map((point) => {answerPoints += `<li>${point}</li>`;})
-    let readmoreContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
+        faqSplit2QuestionsAndAnswers.forEach((value) => {
+            let answerPoints = '';
+            value['answerPoints'] && value['answerPoints'].map((point) => { answerPoints += `<li>${point}</li>`; })
+            let readmoreContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
 
-    faqSplit2Content += `            
+            faqSplit2Content += `            
             <div class="expandable-tile">
                 <button class="collapsible">
                     <div style="font-size: 42px; color: #2B88D8;">•</div>
@@ -1008,31 +900,82 @@ faqSplit2QuestionsAndAnswers.forEach((value) => {
                     </div>
                 </div>
             </div>`;
-});
+        });
 
-$('#faqSplit2').append(faqSplit2Content);
+        $('#faqSplit2').append(faqSplit2Content);
+
+        faqSplit1TamilQuestionsAndAnswers.forEach((value) => {
+            let answerTamilPoints = '';
+            value['answerPoints'] && value['answerPoints'].map((point) => { answerTamilPoints += `<li>${point}</li>`; })
+            let readmoreTamilContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
+
+            faqSplit1TamilContent += `            
+            <div class="expandable-tile">
+                <button class="collapsible">
+                    <div style="font-size: 42px; color: #2B88D8;">•</div>
+                    <div style="max-width: 388px; margin-left: 16px;">${value['question']}</div>
+                    <div class="collapsible-symbol collapsible-symbol-plus">+</div>
+                    <div class="collapsible-symbol collapsible-symbol-minus">-</div>
+                </button>
+                <div class="content">
+                    <div style="margin-bottom: 24px;">
+                        <div class="collapsible-answer">${value['answer']}</div>
+                        <ol class="collapsible-points" style="padding-left: 18px;">
+                            ${answerTamilPoints}
+                        </ol>
+                        ${readmoreTamilContent}
+                    </div>
+                </div>
+            </div>`;
+        });
+
+        $('#faqSplit1Tamil').append(faqSplit1TamilContent);
+
+        faqSplit2TamilQuestionsAndAnswers.forEach((value) => {
+            let answerTamilPoints = '';
+            value['answerPoints'] && value['answerPoints'].map((point) => { answerTamilPoints += `<li>${point}</li>`; })
+            let readmoreTamilContent = value['readMore'] ? `<a href="${value['readMore']}">Read More...</a>` : '';
+
+            faqSplit2TamilContent += `            
+            <div class="expandable-tile">
+                <button class="collapsible">
+                    <div style="font-size: 42px; color: #2B88D8;">•</div>
+                    <div style="max-width: 388px; margin-left: 16px;">${value['question']}</div>
+                    <div class="collapsible-symbol collapsible-symbol-plus">+</div>
+                    <div class="collapsible-symbol collapsible-symbol-minus">-</div>
+                </button>
+                <div class="content">
+                    <div style="margin-bottom: 24px;">
+                        <div class="collapsible-answer">${value['answer']}</div>
+                        <ol class="collapsible-points" style="padding-left: 18px;">
+                            ${answerTamilPoints}
+                        </ol>
+                        ${readmoreTamilContent}
+                    </div>
+                </div>
+            </div>`;
+        });
+
+        $('#faqSplit2Tamil').append(faqSplit2TamilContent);
 
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
 
-for (i = 0; i < coll.length; i++) {
-
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-      this.classList.remove('tile-opened');
-    } else {
-      content.style.maxHeight = (content.scrollHeight) + "px";
-      this.classList.add('tile-opened');
-    }
-  });
-}
-
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    this.classList.remove('tile-opened');
+                } else {
+                    content.style.maxHeight = (content.scrollHeight) + "px";
+                    this.classList.add('tile-opened');
+                }
+            });
+        }
     </script>
-
 </body>
 
 </html>
